@@ -37,10 +37,5 @@ namespace WindowsFormsApp1
             changepasswordowner f = new changepasswordowner();
             f.Show();
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
