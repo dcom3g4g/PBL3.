@@ -104,6 +104,8 @@
     <Compile Include="DoanhThuTuan.Designer.cs">
       <DependentUpon>DoanhThuTuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +163,7 @@
     <Compile Include="sanpham.Designer.cs">
       <DependentUpon>sanpham.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\SHOPSNEAKER.cs" />
     <EmbeddedResource Include="addHD.resx">
       <DependentUpon>addHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,5 +269,6 @@
   <ItemGroup>
     <None Include="Resources\giaynho.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
