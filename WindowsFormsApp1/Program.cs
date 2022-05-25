@@ -16,7 +16,11 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Console.WriteLine(" x"); 
+
             Application.Run(new Loginform());
+
         }
     }
 }
