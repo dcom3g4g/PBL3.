@@ -41,9 +41,9 @@ namespace WindowsFormsApp1
         {
             _obj = this;
           
-            Employeeuser.Dock = DockStyle.Fill;
+            sp.Dock = DockStyle.Fill;
             panel4.Controls.Add(sp);
-            Employeeuser.Dock = DockStyle.Fill;
+            hd.Dock = DockStyle.Fill;
             panel4.Controls.Add(hd);
             Employeeuser.Dock = DockStyle.Fill;
             panel4.Controls.Add(Employeeuser);
