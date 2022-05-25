@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
             Console.WriteLine(" x"); 
 
-            Application.Run(new Loginform());
+            Application.Run(new EmployeeForm());
 
 
         }
