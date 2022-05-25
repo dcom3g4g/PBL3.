@@ -30,7 +30,8 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Detailsanpham f = new Detailsanpham();
+            f.Show();
         }
     }
 }
