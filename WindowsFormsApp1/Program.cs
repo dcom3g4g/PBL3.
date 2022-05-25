@@ -16,17 +16,13 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new EmployeeForm());
-            Console.WriteLine(" x");
-            Console.WriteLine(" Z");
-=======
+
 
             Console.WriteLine(" x"); 
 
             Application.Run(new Loginform());
 
->>>>>>> 806b723bb950793613414bff102ba33114f5f770
+
         }
     }
 }
