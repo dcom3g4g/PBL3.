@@ -41,9 +41,9 @@ namespace WindowsFormsApp1
         {
             _obj = this;
           
-            Employeeuser.Dock = DockStyle.Fill;
+            sp.Dock = DockStyle.Fill;
             panel4.Controls.Add(sp);
-            Employeeuser.Dock = DockStyle.Fill;
+            hd.Dock = DockStyle.Fill;
             panel4.Controls.Add(hd);
             Employeeuser.Dock = DockStyle.Fill;
             panel4.Controls.Add(Employeeuser);
@@ -57,6 +57,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //EmployeeForm.Instance.panel4_.Controls[]
             EmployeeForm.Instance.panel4_.Controls["sanpham"].BringToFront();
         }
 
@@ -67,6 +68,11 @@ namespace WindowsFormsApp1
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
