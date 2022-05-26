@@ -9,7 +9,12 @@ namespace WindowsFormsApp1.DTO
 {
     public class SanPham
     {
-        [Key]
+        public SanPham()
+        {
+            ChiTietHoaDonss = new HashSet<ChiTietHoaDon>() ;
+            SoLuongSPss = new HashSet<SoLuongSP>(); 
+        }
+        [Key,Required]
         public string MSP { get; set; }
         public int TongSLSP { get; set; }
         public string Link { get; set; }
@@ -17,5 +22,7 @@ namespace WindowsFormsApp1.DTO
         public string GiaSP { get; set; }
         public string LoaiSP { get; set; }
         public int HoaHong { get; set;  }
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDonss { get; set; }
+        public virtual ICollection<SoLuongSP> SoLuongSPss { get; set;  }
     }
 }
