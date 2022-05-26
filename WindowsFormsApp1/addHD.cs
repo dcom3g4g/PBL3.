@@ -27,6 +27,11 @@ namespace WindowsFormsApp1
 
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();

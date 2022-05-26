@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.DTO
 {
-    public class Account
+    public class SoLuongSP
     {
         [Key]
         public int ID { get; set; }
-        public string TenDangNhap { get; set; } 
-        public string MatKhau { get; set;  }
-        public bool IsOwner { get; set; }
+        public string MSP { get; set; }
+        public int SoLuong { get; set; }
+        public int Size { get; set; }
     }
 }
