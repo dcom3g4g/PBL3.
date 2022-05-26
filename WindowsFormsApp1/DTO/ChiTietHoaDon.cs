@@ -17,7 +17,5 @@ namespace WindowsFormsApp1.DTO
         public int SoLuong { get; set; }
         public int Size { get; set; }
         public int GiaSP { get; set; }
-
-
     }
 }
