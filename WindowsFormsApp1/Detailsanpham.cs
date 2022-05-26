@@ -21,5 +21,15 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void Detailsanpham_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

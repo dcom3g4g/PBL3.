@@ -22,7 +22,8 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            addHD a = new addHD();
+            a.Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

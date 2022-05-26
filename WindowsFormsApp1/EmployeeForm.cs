@@ -76,5 +76,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Loginform a = new Loginform();
+            a.Show();
+        }
     }
 }
