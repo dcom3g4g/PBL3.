@@ -9,7 +9,7 @@ namespace WindowsFormsApp1.DTO
 {
     public class Account
     {
-        [Key]
+        [Key] 
         public int ID { get; set; }
         public string TenDangNhap { get; set; } 
         public string MatKhau { get; set;  }
