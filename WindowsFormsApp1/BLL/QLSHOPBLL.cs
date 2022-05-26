@@ -21,15 +21,26 @@ namespace WindowsFormsApp1.BLL
             }
             private set { }
         }
-        public bool isowner(Account a)
-        {
-            //var l1=db.Accounts.
-            return true;
-        }
+       
         public List<Account> GetListacc()
             {
             return db.Accounts.ToList();
             }
+        public int getaccount(string TK, string MK)
+        {
+             if (db.Accounts.Where(p => p.TenDangNhap == TK && p.MatKhau == MK).Select(p => p).ToList().FirstOrDefault()==null)
+                return 0;
+
+            else if (db.Accounts.Where(p => p.TenDangNhap == TK && p.MatKhau == MK).Select(p => p).ToList().FirstOrDefault().IsOwner)
+            return 2;
+
+            return 1; 
+        }
+
+        //public int forgotpassword(string Account, string gmail)
+        //{
+        //    if()
+        //}
 
     }
 }

@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
                 new Account{ID=3,TenDangNhap="Admin",MatKhau="123",IsOwner=true},
             });
             Console.WriteLine("cO TAO");
+
         }
     }
 }

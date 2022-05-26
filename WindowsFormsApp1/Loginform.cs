@@ -45,11 +45,23 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            //db.Accounts.Add()
-            this.Hide();
-             OwnerForm a = new OwnerForm();
-            a.Show();
+
+            if (QLSHOPBLL.instance.getaccount(txtTK.Text, txtMK.Text) == 1)
+            {
+                this.Hide();
+                EmployeeForm a = new EmployeeForm();
+                a.Show();
+            }
+            else if (QLSHOPBLL.instance.getaccount(txtTK.Text, txtMK.Text) == 2)
+            {
+                this.Hide();
+                OwnerForm a = new OwnerForm();
+                a.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tai khoan khong ton tai");
+            }
         }
     }
 }
