@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DTO;
 
 namespace WindowsFormsApp1
 {
     public partial class Loginform : Form
     {
+        QLSHOP db = new QLSHOP();
         public Loginform()
         {
             InitializeComponent();
+            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -41,6 +45,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            //db.Accounts.Add()
             this.Hide();
              OwnerForm a = new OwnerForm();
             a.Show();

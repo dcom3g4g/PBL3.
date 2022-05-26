@@ -68,6 +68,7 @@
     <Compile Include="AddNV.Designer.cs">
       <DependentUpon>AddNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\QLSHOPBLL.cs" />
     <Compile Include="ChangepasswordNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,7 +112,15 @@
       <DependentUpon>DoanhThuTuan.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
+    <Compile Include="CreateDB.cs" />
+    <Compile Include="DTO\DoanhThuNam.cs" />
+    <Compile Include="DTO\DoanhThuThang.cs" />
+    <Compile Include="DTO\DoanhThuTuan.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="DTO\SoLuongSP.cs" />
     <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,7 +171,7 @@
     <Compile Include="Nhanvien.Designer.cs">
       <DependentUpon>Nhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLSV.cs" />
+    <Compile Include="DTO\QLSHOP.cs" />
     <Compile Include="sanpham.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.DTO
 {
-    internal class NhanVien
+    public class NhanVien
     {
         [Key]
         public string ID { get; set;  }
