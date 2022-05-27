@@ -23,8 +23,8 @@ namespace WindowsFormsApp1
 
             context.Nhanviens.AddRange(new NhanVien[]
             {
-                new NhanVien{MaNV = "NV01",Name = "Hai Duoi",Gmail = "123@gmail.com",SDT = 123,Gender = false,DiaChi = "5 Ton Duc Thang", NgaySinh = "21/02/2002"},
-                new NhanVien{MaNV = "NV02",Name = "Vu Phu",Gmail = "456@gmail.com",SDT = 456,Gender = true,DiaChi = "7 Nguyen Luong Bang", NgaySinh = "1/05/2002"},
+                new NhanVien{MaNV = "NV01",Name = "Hai Duoi",Gmail = "123@gmail.com",SDT = 123,Gender = false,LuongCB = 2000 ,DiaChi = "5 Ton Duc Thang", NgaySinh = "21/02/2002"},
+                new NhanVien{MaNV = "NV02",Name = "Vu Phu",Gmail = "456@gmail.com",SDT = 456,Gender = true,LuongCB = 3000,DiaChi = "7 Nguyen Luong Bang", NgaySinh = "1/05/2002"},
             });
 
         }
