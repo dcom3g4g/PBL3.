@@ -19,47 +19,41 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource = QLSHOPBLL.instance.GetListNhanVien();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         public void showNV()
         {
             dataGridView1.DataSource = QLSHOPBLL.instance.GetListNhanVien();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void butAdd_Click(object sender, EventArgs e)
         {
-
+            AddNV f = new AddNV("");
+            f.d = new AddNV.Mydel(showNV);
+            f.Show();
         }
 
-        private void Nhanvien_Load(object sender, EventArgs e)
+        private void butUpdate_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AddNV a = new AddNV();
-            a.Show();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-           if(dataGridView1.SelectedRows.Count > 0)
+            if(dataGridView1.SelectedRows.Count == 1)
             {
-                foreach(DataGridViewRow i in dataGridView1.SelectedRows)
+                AddNV f = new AddNV(dataGridView1.SelectedRows[0].Cells["MaNV"].Value.ToString());
+                f.d = new AddNV.Mydel(showNV);
+                f.Show();
+            }
+        }
+
+        private void butDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow i in dataGridView1.SelectedRows)
                 {
                     QLSHOPBLL.instance.DelNV(i.Cells["MaNV"].Value.ToString());
                 }
             }
             showNV();
         }
+
+       
     }
 }

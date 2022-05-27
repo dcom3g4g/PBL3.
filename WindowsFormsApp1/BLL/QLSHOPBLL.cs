@@ -121,13 +121,11 @@ namespace WindowsFormsApp1.BLL
 
         public void AddUpdateNV(NhanVien n)
         {
-            if(checkNV(n.MaNV))
+            if(checkNV(n.MaNV) == false)
             {
                 db.Nhanviens.Add(n);
-                db.Accounts.AddRange(new Account[]
-                {
-                    new Account{TenDangNhap = n.MaNV, MatKhau="123",IsOwner = false},
-                });
+                db.Accounts.Add(new Account { TenDangNhap = n.MaNV, MatKhau = "123", IsOwner = false });
+               
             }
             else
             {
