@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
         public DoanhThuTuan dtt = new DoanhThuTuan();
         public DoanhThuThang dthuthang = new DoanhThuThang();
         public DoanhThuNam dtn = new DoanhThuNam();
-        public Nhanvien nv = new Nhanvien();
+        public Nhanvienusercontrol nv = new Nhanvienusercontrol();
         public Owner_User owneruser = new Owner_User();
         public sanpham sp = new sanpham();
         public Hoadon hd=new Hoadon();
@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OwnerForm.Instance.PannelContain_.Controls["Nhanvien"].BringToFront();
+            OwnerForm.Instance.PannelContain_.Controls["Nhanvienusercontrol"].BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)

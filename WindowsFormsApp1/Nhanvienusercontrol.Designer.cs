@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Nhanvien
+    partial class Nhanvienusercontrol
     {
         /// <summary> 
         /// Required designer variable.
@@ -92,7 +92,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1667, 631);
             this.dataGridView1.TabIndex = 22;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -137,6 +136,7 @@
             this.button2.TabIndex = 27;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -149,7 +149,7 @@
             this.button4.Text = "Sort";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // Nhanvien
+            // Nhanvienusercontrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +164,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Name = "Nhanvien";
+            this.Name = "Nhanvienusercontrol";
             this.Size = new System.Drawing.Size(1833, 937);
             this.Load += new System.EventHandler(this.Nhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
