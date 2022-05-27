@@ -14,11 +14,9 @@ namespace WindowsFormsApp1.DTO
         public int ID { get; set; }
         [Required]
        
-        public string TenSP { get; set; }
        
         public int SoLuong { get; set; }
         public int Size { get; set; }
-        public int GiaSP { get; set; }
         public string MaHD { get; set; }
         [ForeignKey("MaHD")]
         public virtual HoaDon HoaDon { get; set; }

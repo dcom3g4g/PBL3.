@@ -20,8 +20,6 @@ namespace WindowsFormsApp1.DTO
         public string Link { get; set; }
         public string TenSP { get; set; }   
         public string GiaSP { get; set; }
-        public string LoaiSP { get; set; }
-        public int HoaHong { get; set;  }
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDonss { get; set; }
         public virtual ICollection<SoLuongSP> SoLuongSPss { get; set;  }
     }
