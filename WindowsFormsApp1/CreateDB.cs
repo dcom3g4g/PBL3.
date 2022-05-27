@@ -20,7 +20,12 @@ namespace WindowsFormsApp1
                 new Account{ID=2,TenDangNhap="NV02",MatKhau="123",IsOwner=false},
                 new Account{ID=3,TenDangNhap="Admin",MatKhau="123",IsOwner=true},
             });
-            Console.WriteLine("cO TAO");
+
+            context.Nhanviens.AddRange(new NhanVien[]
+            {
+                new NhanVien{MaNV = "NV01",Name = "Hai Duoi",Gmail = "123@gmail.com",SDT = 123,Gender = false,DiaChi = "5 Ton Duc Thang", NgaySinh = "21/02/2002"},
+                new NhanVien{MaNV = "NV02",Name = "Vu Phu",Gmail = "456@gmail.com",SDT = 456,Gender = true,DiaChi = "7 Nguyen Luong Bang", NgaySinh = "1/05/2002"},
+            });
 
         }
     }
