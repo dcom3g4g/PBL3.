@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Detailsanpham : Form
     {
-        public Detailsanpham()
+        public Detailsanpham(string MaSP)
         {
             InitializeComponent();
         }
@@ -30,6 +30,11 @@ namespace WindowsFormsApp1
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
