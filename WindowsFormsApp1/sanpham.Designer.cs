@@ -35,9 +35,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btupdate = new System.Windows.Forms.Button();
+            this.btdelete = new System.Windows.Forms.Button();
+            this.btsort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -114,47 +114,49 @@
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btupdate
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(496, 800);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(195, 69);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btupdate.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btupdate.Location = new System.Drawing.Point(496, 800);
+            this.btupdate.Name = "btupdate";
+            this.btupdate.Size = new System.Drawing.Size(195, 69);
+            this.btupdate.TabIndex = 37;
+            this.btupdate.Text = "Update";
+            this.btupdate.UseVisualStyleBackColor = false;
+            this.btupdate.Click += new System.EventHandler(this.btupdate_Click);
             // 
-            // button2
+            // btdelete
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(869, 800);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 69);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btdelete.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdelete.Location = new System.Drawing.Point(869, 800);
+            this.btdelete.Name = "btdelete";
+            this.btdelete.Size = new System.Drawing.Size(195, 69);
+            this.btdelete.TabIndex = 37;
+            this.btdelete.Text = "Delete";
+            this.btdelete.UseVisualStyleBackColor = false;
+            this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
             // 
-            // button4
+            // btsort
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1232, 800);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(195, 69);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btsort.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btsort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsort.Location = new System.Drawing.Point(1232, 800);
+            this.btsort.Name = "btsort";
+            this.btsort.Size = new System.Drawing.Size(195, 69);
+            this.btsort.TabIndex = 37;
+            this.btsort.Text = "Sort";
+            this.btsort.UseVisualStyleBackColor = false;
             // 
             // sanpham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btsort);
+            this.Controls.Add(this.btdelete);
+            this.Controls.Add(this.btupdate);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -179,8 +181,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btupdate;
+        private System.Windows.Forms.Button btdelete;
+        private System.Windows.Forms.Button btsort;
     }
 }
