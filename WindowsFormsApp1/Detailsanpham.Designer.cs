@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,6 +70,16 @@
             this.panel1.Size = new System.Drawing.Size(1182, 53);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.xoa;
+            this.pictureBox2.Location = new System.Drawing.Point(1140, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 40);
+            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -80,16 +90,6 @@
             this.label11.Size = new System.Drawing.Size(214, 31);
             this.label11.TabIndex = 30;
             this.label11.Text = "Shop SNEAKER";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.xoa;
-            this.pictureBox2.Location = new System.Drawing.Point(1140, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 40);
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // panel2
             // 
@@ -112,6 +112,46 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(302, 613);
             this.panel2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkOrange;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(38, 519);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 40);
+            this.button2.TabIndex = 64;
+            this.button2.Text = "DELETE";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Chartreuse;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(181, 519);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 40);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "ADD";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 349);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 20);
+            this.label1.TabIndex = 62;
+            this.label1.Text = "Price";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(143, 347);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 22);
+            this.textBox1.TabIndex = 61;
             // 
             // numericUpDown2
             // 
@@ -187,6 +227,13 @@
             this.label8.TabIndex = 54;
             this.label8.Text = "Name";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(144, 47);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(139, 22);
+            this.textBox2.TabIndex = 53;
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(144, 127);
@@ -204,46 +251,6 @@
             this.label7.TabIndex = 52;
             this.label7.Text = "Product ID";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(143, 347);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 22);
-            this.textBox1.TabIndex = 61;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 349);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Price";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkOrange;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(38, 519);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 40);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "DELETE";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Chartreuse;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(181, 519);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 40);
-            this.button1.TabIndex = 63;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -254,6 +261,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(880, 65);
             this.panel3.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkOrange;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(615, 14);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(107, 40);
+            this.button4.TabIndex = 65;
+            this.button4.Text = "Cancel";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -266,17 +284,7 @@
             this.button3.TabIndex = 46;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkOrange;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(615, 14);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 40);
-            this.button4.TabIndex = 65;
-            this.button4.Text = "Cancel";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
@@ -299,13 +307,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(878, 546);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(144, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 22);
-            this.textBox2.TabIndex = 53;
             // 
             // Detailsanpham
             // 
