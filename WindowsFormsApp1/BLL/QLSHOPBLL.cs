@@ -27,6 +27,12 @@ namespace WindowsFormsApp1.BLL
                 return true; 
             return false;
         }
+        public bool CheckSL(string MS,int si)
+        {
+            if (db.SoLuongSPs.Where(p=>p.MSP==MS && p.Size==si).FirstOrDefault()!=null)
+                return true;
+            return false; 
+        }
         public void AddUpdateSP(SanPham s)
         {
             if (Check(s.MSP) == false)
@@ -46,10 +52,9 @@ namespace WindowsFormsApp1.BLL
         }
         public void AddSLSP(SoLuongSP s)
         {
-            if (Check(s.MSP) == false)
+            if (CheckSL(s.MSP,s.Size) == false)
             {
                 db.SoLuongSPs.Add(s);
-                
             }
             else
             {

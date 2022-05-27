@@ -37,7 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btupdate = new System.Windows.Forms.Button();
             this.btdelete = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btsort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -138,23 +138,23 @@
             this.btdelete.UseVisualStyleBackColor = false;
             this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
             // 
-            // button4
+            // btsort
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1232, 800);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(195, 69);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btsort.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btsort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsort.Location = new System.Drawing.Point(1232, 800);
+            this.btsort.Name = "btsort";
+            this.btsort.Size = new System.Drawing.Size(195, 69);
+            this.btsort.TabIndex = 37;
+            this.btsort.Text = "Sort";
+            this.btsort.UseVisualStyleBackColor = false;
             // 
             // sanpham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btsort);
             this.Controls.Add(this.btdelete);
             this.Controls.Add(this.btupdate);
             this.Controls.Add(this.button5);
@@ -183,6 +183,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btupdate;
         private System.Windows.Forms.Button btdelete;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btsort;
     }
 }

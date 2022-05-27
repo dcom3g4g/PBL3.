@@ -21,13 +21,14 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             MSP = MaSP;
-            GUI(); 
-        }
+            GUI();         }
         public void GUI()
         {
             SanPham s= QLSHOPBLL.instance.GetSPbyMaSP(MSP);
+            
             if (MSP!="")
             {
+                pictureBox1.Image = new Bitmap(s.Link);
                 txtID.Text = MSP;
                 Txtpic.Text = s.Link;
                 txtName.Text = s.TenSP;
@@ -78,6 +79,21 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(file.FileName);
+                Txtpic.Text = file.FileName;
+            }
         }
     }
 }
