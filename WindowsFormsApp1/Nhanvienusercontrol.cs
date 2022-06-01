@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             showNV();
             setcbb(); 
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetListNhanVien();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         public void setcbb()

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class sanpham
+    partial class SanPhamUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,10 +31,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbbSort = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butSearch = new System.Windows.Forms.Button();
             this.btupdate = new System.Windows.Forms.Button();
             this.btdelete = new System.Windows.Forms.Button();
             this.btsort = new System.Windows.Forms.Button();
@@ -75,22 +75,22 @@
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // cbbSort
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1478, 817);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(226, 37);
-            this.comboBox1.TabIndex = 34;
+            this.cbbSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSort.FormattingEnabled = true;
+            this.cbbSort.Location = new System.Drawing.Point(1478, 817);
+            this.cbbSort.Name = "cbbSort";
+            this.cbbSort.Size = new System.Drawing.Size(226, 37);
+            this.cbbSort.TabIndex = 34;
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1512, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 34);
-            this.textBox1.TabIndex = 33;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(1512, 65);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(192, 34);
+            this.txtSearch.TabIndex = 33;
             // 
             // dataGridView1
             // 
@@ -103,16 +103,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(1645, 620);
             this.dataGridView1.TabIndex = 32;
             // 
-            // button1
+            // butSearch
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1317, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 60);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.butSearch.BackColor = System.Drawing.SystemColors.Highlight;
+            this.butSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSearch.Location = new System.Drawing.Point(1317, 55);
+            this.butSearch.Name = "butSearch";
+            this.butSearch.Size = new System.Drawing.Size(163, 60);
+            this.butSearch.TabIndex = 31;
+            this.butSearch.Text = "Search";
+            this.butSearch.UseVisualStyleBackColor = false;
+            this.butSearch.Click += new System.EventHandler(this.butSearch_Click);
             // 
             // btupdate
             // 
@@ -148,6 +149,7 @@
             this.btsort.TabIndex = 37;
             this.btsort.Text = "Sort";
             this.btsort.UseVisualStyleBackColor = false;
+            this.btsort.Click += new System.EventHandler(this.btsort_Click);
             // 
             // sanpham
             // 
@@ -160,10 +162,10 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbbSort);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.butSearch);
             this.Name = "sanpham";
             this.Size = new System.Drawing.Size(1833, 937);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -177,10 +179,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbbSort;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butSearch;
         private System.Windows.Forms.Button btupdate;
         private System.Windows.Forms.Button btdelete;
         private System.Windows.Forms.Button btsort;
