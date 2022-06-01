@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             dataGridView1.DataSource = QLSHOPBLL.instance.GetListNhanVien();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         

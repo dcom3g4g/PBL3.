@@ -162,10 +162,55 @@ namespace WindowsFormsApp1.BLL
             db.SanPhams.Remove(db.SanPhams.Find(MS)) ;
             db.SaveChanges(); 
         }
-        //public int forgotpassword(string Account, string gmail)
-        //{
-        //    if()
-        //}
+        
+        public List<SanPhamView> GetSPView(List<SanPham> a)
+        {
+            List<SanPhamView> data = new List<SanPhamView>();
+            foreach(SanPham i in a)
+            {
+                data.Add(new SanPhamView
+                {
+                    MSP = i.MSP,
+                    TongSLSP = i.TongSLSP,
+                    TenSP = i.TenSP,
+                    GiaSP = i.GiaSP
+                });
+            }
+            return data;
+        }
+
+        public List<SanPham> SortSP(string type)
+        {
+            
+            List<SanPham> data = QLSHOPBLL.instance.GetListSP();
+            switch(type)
+            {
+                case "Ma San Pham":
+                    {
+                        data = db.SanPhams.OrderBy(p => p.MSP).ToList();
+                        break;
+                    }
+                case "So luong san pham":
+                    {
+                        data = db.SanPhams.OrderBy(p => p.TongSLSP).ToList();
+                        break;
+                    }
+                case "Gia san pham":
+                    {
+                        data = db.SanPhams.OrderBy(p => p.GiaSP).ToList();
+                        break;
+                    }
+            }
+            return data;
+            
+        }
+
+        public List<SanPham> SearchSP(string s)
+        {
+            List<SanPham> data = new List<SanPham>();
+            data = db.SanPhams.Where(p => p.MSP.Contains(s) || p.TenSP.Contains(s)).Select(p => p).ToList();
+            return data;
+        }
 
     }
 }

@@ -120,6 +120,7 @@
     <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="DTO\SanPhamView.cs" />
     <Compile Include="DTO\SoLuongSP.cs" />
     <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
@@ -172,11 +173,11 @@
       <DependentUpon>Nhanvienusercontrol.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\QLSHOP.cs" />
-    <Compile Include="sanpham.cs">
+    <Compile Include="SanPhamUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="sanpham.Designer.cs">
-      <DependentUpon>sanpham.cs</DependentUpon>
+    <Compile Include="SanPhamUserControl.Designer.cs">
+      <DependentUpon>SanPhamUserControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="addHD.resx">
       <DependentUpon>addHD.cs</DependentUpon>
@@ -239,8 +240,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="sanpham.resx">
-      <DependentUpon>sanpham.cs</DependentUpon>
+    <EmbeddedResource Include="SanPhamUserControl.resx">
+      <DependentUpon>SanPhamUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
