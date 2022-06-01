@@ -107,7 +107,7 @@ namespace WindowsFormsApp1.BLL
             
         }
 
-        public List<NhanVien> GetListNhanVien()
+        public List<NhanVien> GetListNhanVien() 
         {
             return db.Nhanviens.ToList();
         }
@@ -118,16 +118,33 @@ namespace WindowsFormsApp1.BLL
                 return true;
             return false;
         }
-
+        public List<NhanVienView> GetNhanvienViews(List<NhanVien> a)
+        {
+            List<NhanVienView> nv = new List<NhanVienView>();
+            foreach (NhanVien v in a)
+            {
+                nv.Add(new NhanVienView
+                {
+                    MaNV = v.MaNV,
+                    Name = v.Name,
+                    Gmail = v.Gmail,
+                    SDT = v.SDT,
+                    LuongCB = v.LuongCB,
+                    Gender = v.Gender,
+                    DiaChi = v.DiaChi,
+                    NgaySinh = v.NgaySinh,
+                });
+            }
+            return nv;
+        }
+      
         public void AddUpdateNV(NhanVien n)
         {
-            if(checkNV(n.MaNV))
+            if(checkNV(n.MaNV) == false)
             {
                 db.Nhanviens.Add(n);
-                db.Accounts.AddRange(new Account[]
-                {
-                    new Account{TenDangNhap = n.MaNV, MatKhau="123",IsOwner = false},
-                });
+                db.Accounts.Add(new Account { TenDangNhap = n.MaNV, MatKhau = "123", IsOwner = false });
+               
             }
             else
             {
@@ -165,15 +182,89 @@ namespace WindowsFormsApp1.BLL
             else return  (Convert.ToInt32( db.Hoadons.OrderBy(p => p.MaHD).ToList().FirstOrDefault().MaHD) + 1);
             return 1; 
         }
+        public List<NhanVien> SortNV(string type)
+        {
+            List<NhanVien> data = QLSHOPBLL.instance.GetListNhanVien();
+            switch(type)
+            {
+                case "Ma Nhan Vien":
+                    {
+                        data = db.Nhanviens.OrderBy(p => p.MaNV).ToList();
+                        break;
+                    }
+                case "Ten Nhan Vien":
+                    {
+                        data = db.Nhanviens.OrderBy(p => p.Name).ToList();
+                        break;
+                    }
+                case "Luong co ban":
+                    {
+                        data = db.Nhanviens.OrderBy(p => p.LuongCB).ToList();
+                        break;
+                    }
+            }
+            return data;
+        }
+        public List<NhanVien> SeachNV(string s)
+        {
+            List<NhanVien> data = new List<NhanVien>();
+            data = db.Nhanviens.Where(p=> p.MaNV.Contains(s) || p.Name.Contains(s)).ToList();
+            return data;
+        }
         public void DellSP(string MS)
         {
             db.SanPhams.Remove(db.SanPhams.Find(MS)) ;
             db.SaveChanges(); 
         }
-        //public int forgotpassword(string Account, string gmail)
-        //{
-        //    if()
-        //}
+        
+        public List<SanPhamView> GetSPView(List<SanPham> a)
+        {
+            List<SanPhamView> data = new List<SanPhamView>();
+            foreach(SanPham i in a)
+            {
+                data.Add(new SanPhamView
+                {
+                    MSP = i.MSP,
+                    TongSLSP = i.TongSLSP,
+                    TenSP = i.TenSP,
+                    GiaSP = i.GiaSP
+                });
+            }
+            return data;
+        }
+
+        public List<SanPham> SortSP(string type)
+        {
+            
+            List<SanPham> data = QLSHOPBLL.instance.GetListSP();
+            switch(type)
+            {
+                case "Ma San Pham":
+                    {
+                        data = db.SanPhams.OrderBy(p => p.MSP).ToList();
+                        break;
+                    }
+                case "So luong san pham":
+                    {
+                        data = db.SanPhams.OrderBy(p => p.TongSLSP).ToList();
+                        break;
+                    }
+                case "Gia san pham":
+                    {
+                        data = db.SanPhams.OrderBy(p => p.GiaSP).ToList();
+                        break;
+                    }
+            }
+            return data;
+            
+        }
+
+        public List<SanPham> SearchSP(string s)
+        {
+            List<SanPham> data = new List<SanPham>();
+            data = db.SanPhams.Where(p => p.MSP.Contains(s) || p.TenSP.Contains(s)).Select(p => p).ToList();
+            return data;
+        }
 
     }
 }

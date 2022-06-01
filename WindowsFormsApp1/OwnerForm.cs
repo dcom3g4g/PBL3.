@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
         public Owner_User owneruser = new Owner_User();
         public sanpham sp = new sanpham();
         public Hoadon hd=new Hoadon("");
+        public SanPhamUserControl sp = new SanPhamUserControl();
+        public Hoadon hd=new Hoadon();
         public static OwnerForm Instance
         {
             get

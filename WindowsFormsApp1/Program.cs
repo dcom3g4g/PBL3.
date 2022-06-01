@@ -18,8 +18,6 @@ namespace WindowsFormsApp1
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Console.WriteLine(" x"); 
-
             Application.Run(new Loginform());
 
 

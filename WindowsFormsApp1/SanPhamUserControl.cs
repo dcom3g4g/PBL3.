@@ -11,21 +11,27 @@ using WindowsFormsApp1.BLL;
 
 namespace WindowsFormsApp1
 {
-    public partial class sanpham : UserControl
+    public partial class SanPhamUserControl : UserControl
     {
-        public sanpham()
+        public SanPhamUserControl()
         {
             InitializeComponent();
-            ShowSP(); 
+            ShowSP();
+            setcbb();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void setcbb()
         {
-
+            cbbSort.Items.Add("Ma San Pham");
+            cbbSort.Items.Add("So luong san pham");
+            cbbSort.Items.Add("Gia san pham");
         }
+
+        
         public void ShowSP()
         {
-            dataGridView1.DataSource = QLSHOPBLL.instance.GetListSP(); 
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetSPView(QLSHOPBLL.instance.GetListSP());
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void butadd_Click(object sender, EventArgs e)
         {
@@ -61,6 +67,18 @@ namespace WindowsFormsApp1
                 }
             };
             ShowSP(); 
+        }
+
+        private void btsort_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetSPView(QLSHOPBLL.instance.SortSP(cbbSort.SelectedItem.ToString()));
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void butSearch_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetSPView(QLSHOPBLL.instance.SearchSP(txtSearch.Text));
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

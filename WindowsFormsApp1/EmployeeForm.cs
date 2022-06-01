@@ -18,6 +18,10 @@ namespace WindowsFormsApp1
         public sanpham sp = new sanpham();
         public Hoadon hd ;
         public Employee_user Employeeuser;
+        public Employee_user Employeeuser = new Employee_user();
+        public SanPhamUserControl sp = new SanPhamUserControl();
+        public Hoadon hd = new Hoadon();
+
         public static EmployeeForm Instance
         {
             get
