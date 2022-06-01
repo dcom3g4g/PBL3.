@@ -107,7 +107,7 @@ namespace WindowsFormsApp1.BLL
             
         }
 
-        public List<NhanVien> GetListNhanVien()
+        public List<NhanVien> GetListNhanVien() 
         {
             return db.Nhanviens.ToList();
         }
@@ -118,7 +118,26 @@ namespace WindowsFormsApp1.BLL
                 return true;
             return false;
         }
-
+        public List<NhanVienView> GetNhanvienViews(List<NhanVien> a)
+        {
+            List<NhanVienView> nv = new List<NhanVienView>();
+            foreach (NhanVien v in a)
+            {
+                nv.Add(new NhanVienView
+                {
+                    MaNV = v.MaNV,
+                    Name = v.Name,
+                    Gmail = v.Gmail,
+                    SDT = v.SDT,
+                    LuongCB = v.LuongCB,
+                    Gender = v.Gender,
+                    DiaChi = v.DiaChi,
+                    NgaySinh = v.NgaySinh,
+                });
+            }
+            return nv;
+        }
+      
         public void AddUpdateNV(NhanVien n)
         {
             if(checkNV(n.MaNV) == false)
@@ -156,7 +175,35 @@ namespace WindowsFormsApp1.BLL
             return db.Nhanviens.Where(p => p.MaNV == MNV).ToList().FirstOrDefault();
         }
 
-
+        public List<NhanVien> SortNV(string type)
+        {
+            List<NhanVien> data = QLSHOPBLL.instance.GetListNhanVien();
+            switch(type)
+            {
+                case "Ma Nhan Vien":
+                    {
+                        data = db.Nhanviens.OrderBy(p => p.MaNV).ToList();
+                        break;
+                    }
+                case "Ten Nhan Vien":
+                    {
+                        data = db.Nhanviens.OrderBy(p => p.Name).ToList();
+                        break;
+                    }
+                case "Luong co ban":
+                    {
+                        data = db.Nhanviens.OrderBy(p => p.LuongCB).ToList();
+                        break;
+                    }
+            }
+            return data;
+        }
+        public List<NhanVien> SeachNV(string s)
+        {
+            List<NhanVien> data = new List<NhanVien>();
+            data = db.Nhanviens.Where(p=> p.MaNV.Contains(s) || p.Name.Contains(s)).ToList();
+            return data;
+        }
         public void DellSP(string MS)
         {
             db.SanPhams.Remove(db.SanPhams.Find(MS)) ;

@@ -16,19 +16,27 @@ namespace WindowsFormsApp1
         public Nhanvienusercontrol()
         {
             InitializeComponent();
-            dataGridView1.DataSource = QLSHOPBLL.instance.GetListNhanVien();
+            showNV();
+            setcbb(); 
         }
 
-        
+        public void setcbb()
+        {
+            cbbSort.Items.Add("Ma Nhan Vien");
+            cbbSort.Items.Add("Ten Nhan Vien");
+            cbbSort.Items.Add("Luong co ban");
+
+        }
         public void showNV()
         {
-            dataGridView1.DataSource = QLSHOPBLL.instance.GetListNhanVien();
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetNhanvienViews(QLSHOPBLL.instance.GetListNhanVien());
         }
 
         private void butAdd_Click(object sender, EventArgs e)
         {
             AddNV f = new AddNV("");
             f.d = new AddNV.Mydel(showNV);
+
             f.Show();
         }
 
@@ -54,6 +62,14 @@ namespace WindowsFormsApp1
             showNV();
         }
 
-       
+        private void butSort_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetNhanvienViews(QLSHOPBLL.instance.SortNV(cbbSort.SelectedItem.ToString()));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetNhanvienViews(QLSHOPBLL.instance.SeachNV(txtSearch.Text));
+        }
     }
 }
