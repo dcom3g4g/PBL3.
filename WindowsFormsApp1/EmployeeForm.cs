@@ -11,19 +11,20 @@ using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
     public partial class EmployeeForm : Form
-    {
+    {   
+        public static string Ma = ""; 
         static EmployeeForm _obj;
-        public Employee_user Employeeuser = new Employee_user();
+        
         public sanpham sp = new sanpham();
-        public Hoadon hd = new Hoadon();
-
+        public Hoadon hd ;
+        public Employee_user Employeeuser;
         public static EmployeeForm Instance
         {
             get
             {
                 if (_obj == null)
                 {
-                    _obj = new EmployeeForm();
+                    _obj = new EmployeeForm(null);
                 }
                 return _obj;
             }
@@ -33,14 +34,19 @@ namespace WindowsFormsApp1
             get { return panel4; }
             set { panel4 = value; }
         }
-        public EmployeeForm()
-        {
+        public EmployeeForm(string MANV)
+        { 
+            Ma = MANV; 
+            Employee_user Employeeuser = new Employee_user(Ma);
+            Hoadon hd = new Hoadon(Ma);
             InitializeComponent();
+           
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             _obj = this;
-          
+            Employee_user Employeeuser = new Employee_user(Ma);
+            Hoadon hd = new Hoadon(Ma);
             sp.Dock = DockStyle.Fill;
             panel4.Controls.Add(sp);
             hd.Dock = DockStyle.Fill;

@@ -14,15 +14,22 @@ namespace WindowsFormsApp1
 {
     public partial class Hoadon : UserControl
     {
-       // QLSHOPBLL QL = new QLSHOPBLL(); 
-        public Hoadon()
+        // QLSHOPBLL QL = new QLSHOPBLL(); 
+        public string MA = ""; 
+        public Hoadon(string MA1)
         {
+            MA = MA1; 
             InitializeComponent();
-        }
 
+        }
+        public void GUI()
+        {
+           // txt
+        }
         private void button5_Click(object sender, EventArgs e)
         {
-            addHD a = new addHD();
+            //MessageBox.Show(MA); 
+            addHD a = new addHD(MA);
             a.Show();
         }
 

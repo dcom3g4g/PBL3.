@@ -158,7 +158,13 @@ namespace WindowsFormsApp1.BLL
             return db.Nhanviens.Where(p => p.MaNV == MNV).ToList().FirstOrDefault();
         }
 
-
+        public int GetMaHDLast()
+        {
+            if (db.Hoadons.OrderBy(p => p.MaHD).FirstOrDefault() == null)
+                return 1;
+            else return  (Convert.ToInt32( db.Hoadons.OrderBy(p => p.MaHD).ToList().FirstOrDefault().MaHD) + 1);
+            return 1; 
+        }
         public void DellSP(string MS)
         {
             db.SanPhams.Remove(db.SanPhams.Find(MS)) ;

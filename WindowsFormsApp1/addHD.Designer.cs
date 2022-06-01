@@ -32,42 +32,42 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtday = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnamenv = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.updownsl = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.updownsize = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbidsp = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtnamesp = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtidnv = new System.Windows.Forms.TextBox();
+            this.txtidhoadon = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updownsl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updownsize)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -107,17 +107,17 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtidhoadon);
+            this.panel2.Controls.Add(this.txtidnv);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtday);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtnamenv);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 53);
@@ -126,11 +126,64 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(911, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "Day Time";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtday
+            // 
+            this.txtday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday.Location = new System.Drawing.Point(1044, 93);
+            this.txtday.Name = "txtday";
+            this.txtday.Size = new System.Drawing.Size(251, 27);
+            this.txtday.TabIndex = 51;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(911, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "Bill ID";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(1044, 30);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(251, 27);
+            this.textBox3.TabIndex = 49;
+            // 
             // label4
             // 
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 53;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 54;
             // 
             // textBox2
             // 
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 55;
             // 
             // pictureBox1
             // 
@@ -153,22 +206,13 @@
             this.label2.Text = "Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // txtnamenv
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(436, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(251, 28);
-            this.comboBox1.TabIndex = 39;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(436, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 27);
-            this.textBox1.TabIndex = 38;
+            this.txtnamenv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnamenv.Location = new System.Drawing.Point(436, 93);
+            this.txtnamenv.Name = "txtnamenv";
+            this.txtnamenv.Size = new System.Drawing.Size(251, 27);
+            this.txtnamenv.TabIndex = 38;
             // 
             // label1
             // 
@@ -185,13 +229,13 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.numericUpDown2);
+            this.panel3.Controls.Add(this.updownsl);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.numericUpDown1);
+            this.panel3.Controls.Add(this.updownsize);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.comboBox4);
+            this.panel3.Controls.Add(this.cbidsp);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.txtnamesp);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
@@ -223,23 +267,23 @@
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // numericUpDown2
+            // updownsl
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(143, 317);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.updownsl.Location = new System.Drawing.Point(143, 317);
+            this.updownsl.Maximum = new decimal(new int[] {
             43,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.updownsl.Minimum = new decimal(new int[] {
             36,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(139, 22);
-            this.numericUpDown2.TabIndex = 51;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.updownsl.Name = "updownsl";
+            this.updownsl.Size = new System.Drawing.Size(139, 22);
+            this.updownsl.TabIndex = 51;
+            this.updownsl.Value = new decimal(new int[] {
             36,
             0,
             0,
@@ -255,23 +299,23 @@
             this.label10.TabIndex = 50;
             this.label10.Text = "Quantity";
             // 
-            // numericUpDown1
+            // updownsize
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(143, 231);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.updownsize.Location = new System.Drawing.Point(143, 231);
+            this.updownsize.Maximum = new decimal(new int[] {
             43,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.updownsize.Minimum = new decimal(new int[] {
             36,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(139, 22);
-            this.numericUpDown1.TabIndex = 49;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.updownsize.Name = "updownsize";
+            this.updownsize.Size = new System.Drawing.Size(139, 22);
+            this.updownsize.TabIndex = 49;
+            this.updownsize.Value = new decimal(new int[] {
             36,
             0,
             0,
@@ -287,13 +331,14 @@
             this.label9.TabIndex = 48;
             this.label9.Text = "Size";
             // 
-            // comboBox4
+            // cbidsp
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(143, 59);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(139, 24);
-            this.comboBox4.TabIndex = 47;
+            this.cbidsp.FormattingEnabled = true;
+            this.cbidsp.Location = new System.Drawing.Point(143, 59);
+            this.cbidsp.Name = "cbidsp";
+            this.cbidsp.Size = new System.Drawing.Size(139, 24);
+            this.cbidsp.TabIndex = 47;
+            this.cbidsp.SelectedIndexChanged += new System.EventHandler(this.cbidsp_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -305,12 +350,12 @@
             this.label8.TabIndex = 46;
             this.label8.Text = "Name";
             // 
-            // textBox4
+            // txtnamesp
             // 
-            this.textBox4.Location = new System.Drawing.Point(143, 147);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 22);
-            this.textBox4.TabIndex = 45;
+            this.txtnamesp.Location = new System.Drawing.Point(143, 147);
+            this.txtnamesp.Name = "txtnamesp";
+            this.txtnamesp.Size = new System.Drawing.Size(139, 22);
+            this.txtnamesp.TabIndex = 45;
             // 
             // label7
             // 
@@ -380,43 +425,21 @@
             this.button3.Text = "Save Bill";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // txtidnv
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(911, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "Bill ID";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtidnv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidnv.Location = new System.Drawing.Point(436, 33);
+            this.txtidnv.Name = "txtidnv";
+            this.txtidnv.Size = new System.Drawing.Size(251, 27);
+            this.txtidnv.TabIndex = 56;
             // 
-            // textBox3
+            // txtidhoadon
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(1044, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 27);
-            this.textBox3.TabIndex = 49;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(911, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 20);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "Day Time";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(1044, 93);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(251, 27);
-            this.textBox5.TabIndex = 51;
+            this.txtidhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidhoadon.Location = new System.Drawing.Point(1044, 33);
+            this.txtidhoadon.Name = "txtidhoadon";
+            this.txtidhoadon.Size = new System.Drawing.Size(251, 27);
+            this.txtidhoadon.TabIndex = 57;
             // 
             // addHD
             // 
@@ -440,8 +463,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updownsl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updownsize)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -458,21 +481,20 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnamenv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown updownsl;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown updownsize;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbidsp;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtnamesp;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
@@ -480,8 +502,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtday;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtidnv;
+        private System.Windows.Forms.TextBox txtidhoadon;
     }
 }

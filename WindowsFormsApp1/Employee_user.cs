@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DTO;
+using WindowsFormsApp1.BLL;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class Employee_user : UserControl
     {
-        public Employee_user()
+        public string MaNV="" ; 
+        public Employee_user(string Ma)
         {
             InitializeComponent();
+            MaNV = Ma;
+            NhanVien s = QLSHOPBLL.instance.GetNVByMaNV(MaNV);
+            textBox1.Text = s.MaNV;
+            textBox4.Text = s.Name;
+            if (s.Gender)
+                textBox2.Text = "Nam";
+            else textBox2.Text = "Nu";
+            textBox3.Text = s.DiaChi;
+            textBox5.Text = s.SDT.ToString();
+            textBox6.Text = s.Gmail; 
         }
 
         private void button1_Click(object sender, EventArgs e)

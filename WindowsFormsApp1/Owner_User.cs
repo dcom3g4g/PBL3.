@@ -15,6 +15,12 @@ namespace WindowsFormsApp1
         public Owner_User()
         {
             InitializeComponent();
+            textBox1.Text = "Admin";
+            textBox2.Text = "Tran Van Hai";
+            textBox3.Text = "Nam ";
+            textBox5.Text = "447 Ton Duc Thang";
+            textBox6.Text = "0338186574";
+            textBox7.Text = "binhphaptamquoc@gmail.com"; 
         }
 
         private void Owner_User_Load(object sender, EventArgs e)

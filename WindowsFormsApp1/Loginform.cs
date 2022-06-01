@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
             if (QLSHOPBLL.instance.getaccount(txtTK.Text, txtMK.Text) == 1)
             {
                 this.Hide();
-                EmployeeForm a = new EmployeeForm();
+                EmployeeForm a = new EmployeeForm((txtTK.Text));
                 a.Show();
             }
             else if (QLSHOPBLL.instance.getaccount(txtTK.Text, txtMK.Text) == 2)
