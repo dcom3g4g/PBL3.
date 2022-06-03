@@ -16,9 +16,6 @@ namespace WindowsFormsApp1.DTO
         }
         [Key,Required]
         public string MaHD { get; set; }
-
-        
-        
         public int TongSL { get; set; }
         public int TongTien { get; set; }
         [Required]

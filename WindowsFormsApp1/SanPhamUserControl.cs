@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
     {
         public SanPhamUserControl()
         {
+            
             InitializeComponent();
             ShowSP();
             setcbb();

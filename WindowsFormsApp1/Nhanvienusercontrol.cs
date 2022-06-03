@@ -73,5 +73,10 @@ namespace WindowsFormsApp1
         {
             dataGridView1.DataSource = QLSHOPBLL.instance.GetNhanvienViews(QLSHOPBLL.instance.SeachNV(txtSearch.Text));
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
