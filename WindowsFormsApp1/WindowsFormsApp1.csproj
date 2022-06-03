@@ -180,6 +180,12 @@
     <Compile Include="SanPhamUserControl.Designer.cs">
       <DependentUpon>SanPhamUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="SPofNVusercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SPofNVusercontrol.Designer.cs">
+      <DependentUpon>SPofNVusercontrol.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addHD.resx">
       <DependentUpon>addHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +250,9 @@
     <EmbeddedResource Include="SanPhamUserControl.resx">
       <DependentUpon>SanPhamUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SPofNVusercontrol.resx">
+      <DependentUpon>SPofNVusercontrol.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -288,6 +297,23 @@
   <ItemGroup>
     <None Include="Resources\giaynho.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Anh-Giay\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\converse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giay_Bitis_Hunter_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLB-NY.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nick-f1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nike-Air-Jordan.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
