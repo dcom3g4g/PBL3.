@@ -11,10 +11,10 @@ namespace WindowsFormsApp1
         public DoanhThuNam dtn = new DoanhThuNam();
         public Nhanvienusercontrol nv = new Nhanvienusercontrol();
         public Owner_User owneruser = new Owner_User();
-        public sanpham sp = new sanpham();
+       // public sanpham sp = new sanpham();
         public Hoadon hd=new Hoadon("");
         public SanPhamUserControl sp = new SanPhamUserControl();
-        public Hoadon hd=new Hoadon();
+        //public Hoadon hd=new Hoadon();
         public static OwnerForm Instance
         {
             get

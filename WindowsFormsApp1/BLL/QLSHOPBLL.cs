@@ -107,6 +107,28 @@ namespace WindowsFormsApp1.BLL
             
         }
 
+        public int FindPassword(string account, string password,string newpassword,string conformpassword)
+        {
+            if(db.Accounts.Where(p=> p.TenDangNhap == account && p.MatKhau == password).Select(p => p).ToList().FirstOrDefault() != null)
+            {
+                if (newpassword == conformpassword)
+                {
+                    return 0;
+                }
+                else
+                    return 1;
+            }
+            return 2;
+        }
+
+        public void changepassword(string account,string newpassword)
+        {
+
+            var l1 = db.Accounts.Where(p => p.TenDangNhap == account).FirstOrDefault();
+            l1.MatKhau = newpassword;
+            db.SaveChanges();
+        }
+
         public List<NhanVien> GetListNhanVien() 
         {
             return db.Nhanviens.ToList();

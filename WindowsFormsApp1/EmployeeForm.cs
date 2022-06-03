@@ -15,12 +15,12 @@ namespace WindowsFormsApp1
         public static string Ma = ""; 
         static EmployeeForm _obj;
         
-        public sanpham sp = new sanpham();
+        //public sanpham sp = new sanpham();
         public Hoadon hd ;
         public Employee_user Employeeuser;
-        public Employee_user Employeeuser = new Employee_user();
+       // public Employee_user Employeeuser = new Employee_user();
         public SanPhamUserControl sp = new SanPhamUserControl();
-        public Hoadon hd = new Hoadon();
+        //public Hoadon hd = new Hoadon();
 
         public static EmployeeForm Instance
         {
