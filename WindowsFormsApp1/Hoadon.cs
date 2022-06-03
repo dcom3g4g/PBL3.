@@ -20,16 +20,22 @@ namespace WindowsFormsApp1
         {
             MA = MA1; 
             InitializeComponent();
+            showHD(); 
 
         }
         public void GUI()
         {
            // txt
         }
+        public void showHD()
+        {
+            dataGridView1.DataSource = (QLSHOPBLL.instance.GetListHD());
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(MA); 
             addHD a = new addHD(MA);
+            a.d = new addHD.Mydel(showHD);
             a.Show();
         }
 
@@ -46,6 +52,18 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = QLSHOPBLL.instance.GetListacc(); 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow i in dataGridView1.SelectedRows)
+                {
+                    QLSHOPBLL.instance.DelHD(i.Cells["MaHD"].Value.ToString());
+                }
+            }
+            showHD(); 
         }
     }
 }

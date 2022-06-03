@@ -17,11 +17,17 @@ namespace WindowsFormsApp1
 
         // public sanpham sp = new sanpham();
         public Hoadon hd;
+        
+        //public sanpham sp = new sanpham();
+        public Hoadon hd ;
         public Employee_user Employeeuser;
         //public Employee_user Employeeuser = new Employee_user();
      
         public SPofNVusercontrol sp = new SPofNVusercontrol();
       
+        //public Hoadon hd = new Hoadon();
+       // public Employee_user Employeeuser = new Employee_user();
+        public SanPhamUserControl sanpham = new SanPhamUserControl();
         //public Hoadon hd = new Hoadon();
 
         public static EmployeeForm Instance
@@ -43,7 +49,7 @@ namespace WindowsFormsApp1
         
         public EmployeeForm(string MANV)
         { 
-            Ma = MANV; 
+            Ma = MANV;
             Employee_user Employeeuser = new Employee_user(Ma);
             Hoadon hd = new Hoadon(Ma);
             
@@ -55,8 +61,8 @@ namespace WindowsFormsApp1
             _obj = this;
             Employee_user Employeeuser = new Employee_user(Ma);
             Hoadon hd = new Hoadon(Ma);
-            sp.Dock = DockStyle.Fill;
-            panel4.Controls.Add(sp);
+            sanpham.Dock = DockStyle.Fill;
+            panel4.Controls.Add(sanpham);
             hd.Dock = DockStyle.Fill;
             panel4.Controls.Add(hd);
             Employeeuser.Dock = DockStyle.Fill;
@@ -66,6 +72,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             EmployeeForm.Instance.panel4_.Controls["Employee_user"].BringToFront();
         }
 
@@ -74,6 +81,9 @@ namespace WindowsFormsApp1
             //EmployeeForm.Instance.panel4_.Controls[]
             EmployeeForm.Instance.panel4_.Controls["SPofNVusercontrol"].BringToFront();
             
+           
+            EmployeeForm.Instance.panel4_.Controls["sanpham"].BringToFront();
+            sanpham.ShowSP();
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -114,6 +114,7 @@
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs" />
     <Compile Include="CreateDB.cs" />
+    <Compile Include="DTO\ChiTietHoaDonView.cs" />
     <Compile Include="DTO\DoanhThuNam.cs" />
     <Compile Include="DTO\DoanhThuThang.cs" />
     <Compile Include="DTO\DoanhThuTuan.cs" />

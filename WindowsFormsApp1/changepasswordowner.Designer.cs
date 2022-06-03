@@ -33,14 +33,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnewpassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.txtaccount = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtconform = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -90,12 +90,12 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Shop SNEAKER";
             // 
-            // textBox1
+            // txtnewpassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 7;
+            this.txtnewpassword.Location = new System.Drawing.Point(233, 254);
+            this.txtnewpassword.Name = "txtnewpassword";
+            this.txtnewpassword.Size = new System.Drawing.Size(195, 22);
+            this.txtnewpassword.TabIndex = 7;
             // 
             // label1
             // 
@@ -117,19 +117,19 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Old password";
             // 
-            // textBox2
+            // txtpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(214, 191);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 22);
-            this.textBox2.TabIndex = 7;
+            this.txtpassword.Location = new System.Drawing.Point(233, 191);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.Size = new System.Drawing.Size(195, 22);
+            this.txtpassword.TabIndex = 7;
             // 
-            // textBox3
+            // txtaccount
             // 
-            this.textBox3.Location = new System.Drawing.Point(212, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 22);
-            this.textBox3.TabIndex = 9;
+            this.txtaccount.Location = new System.Drawing.Point(231, 133);
+            this.txtaccount.Name = "txtaccount";
+            this.txtaccount.Size = new System.Drawing.Size(195, 22);
+            this.txtaccount.TabIndex = 9;
             // 
             // label4
             // 
@@ -151,12 +151,12 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Conform password";
             // 
-            // textBox4
+            // txtconform
             // 
-            this.textBox4.Location = new System.Drawing.Point(214, 313);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 22);
-            this.textBox4.TabIndex = 7;
+            this.txtconform.Location = new System.Drawing.Point(233, 313);
+            this.txtconform.Name = "txtconform";
+            this.txtconform.Size = new System.Drawing.Size(195, 22);
+            this.txtconform.TabIndex = 7;
             // 
             // button1
             // 
@@ -167,6 +167,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // changepasswordowner
             // 
@@ -174,12 +175,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(461, 458);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtaccount);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtconform);
+            this.Controls.Add(this.txtnewpassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -187,7 +188,6 @@
             this.Name = "changepasswordowner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "changepassword";
-            this.Load += new System.EventHandler(this.changepassword_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -203,14 +203,14 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnewpassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.TextBox txtaccount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtconform;
         private System.Windows.Forms.Button button1;
     }
 }
