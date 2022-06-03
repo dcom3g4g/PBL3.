@@ -32,10 +32,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtidhoadon = new System.Windows.Forms.TextBox();
+            this.txtidnv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtday = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnamenv = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -55,12 +57,11 @@
             this.txtnamesp = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txttongtien = new System.Windows.Forms.TextBox();
+            this.lbtongtien = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txtidnv = new System.Windows.Forms.TextBox();
-            this.txtidhoadon = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -126,6 +127,22 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // txtidhoadon
+            // 
+            this.txtidhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidhoadon.Location = new System.Drawing.Point(1044, 33);
+            this.txtidhoadon.Name = "txtidhoadon";
+            this.txtidhoadon.Size = new System.Drawing.Size(251, 27);
+            this.txtidhoadon.TabIndex = 57;
+            // 
+            // txtidnv
+            // 
+            this.txtidnv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidnv.Location = new System.Drawing.Point(436, 33);
+            this.txtidnv.Name = "txtidnv";
+            this.txtidnv.Size = new System.Drawing.Size(251, 27);
+            this.txtidnv.TabIndex = 56;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -155,14 +172,6 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Bill ID";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(1044, 30);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 27);
-            this.textBox3.TabIndex = 49;
             // 
             // label4
             // 
@@ -224,6 +233,14 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "ID Employee";
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(1044, 30);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(251, 27);
+            this.textBox3.TabIndex = 49;
+            // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -254,6 +271,7 @@
             this.button2.TabIndex = 53;
             this.button2.Text = "DELETE";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -266,6 +284,7 @@
             this.button1.TabIndex = 52;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // updownsl
             // 
@@ -320,6 +339,7 @@
             0,
             0,
             0});
+            this.updownsize.ValueChanged += new System.EventHandler(this.updownsize_ValueChanged);
             // 
             // label9
             // 
@@ -369,6 +389,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.txttongtien);
+            this.panel4.Controls.Add(this.lbtongtien);
             this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 228);
@@ -376,24 +398,40 @@
             this.panel4.Size = new System.Drawing.Size(1155, 524);
             this.panel4.TabIndex = 3;
             // 
+            // txttongtien
+            // 
+            this.txttongtien.Enabled = false;
+            this.txttongtien.Location = new System.Drawing.Point(307, 496);
+            this.txttongtien.Name = "txttongtien";
+            this.txttongtien.Size = new System.Drawing.Size(189, 22);
+            this.txttongtien.TabIndex = 54;
+            // 
+            // lbtongtien
+            // 
+            this.lbtongtien.AutoSize = true;
+            this.lbtongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtongtien.Location = new System.Drawing.Point(175, 490);
+            this.lbtongtien.Name = "lbtongtien";
+            this.lbtongtien.Size = new System.Drawing.Size(92, 32);
+            this.lbtongtien.TabIndex = 1;
+            this.lbtongtien.Text = "Total:";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1155, 524);
+            this.dataGridView1.Size = new System.Drawing.Size(1155, 480);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.button3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 752);
@@ -401,45 +439,18 @@
             this.panel5.Size = new System.Drawing.Size(1155, 83);
             this.panel5.TabIndex = 4;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Chartreuse;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(699, 11);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(146, 51);
-            this.button5.TabIndex = 45;
-            this.button5.Text = "Print Bill";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Chartreuse;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(227, 11);
+            this.button3.Location = new System.Drawing.Point(540, 22);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 51);
             this.button3.TabIndex = 44;
             this.button3.Text = "Save Bill";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // txtidnv
-            // 
-            this.txtidnv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidnv.Location = new System.Drawing.Point(436, 33);
-            this.txtidnv.Name = "txtidnv";
-            this.txtidnv.Size = new System.Drawing.Size(251, 27);
-            this.txtidnv.TabIndex = 56;
-            // 
-            // txtidhoadon
-            // 
-            this.txtidhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidhoadon.Location = new System.Drawing.Point(1044, 33);
-            this.txtidhoadon.Name = "txtidhoadon";
-            this.txtidhoadon.Size = new System.Drawing.Size(251, 27);
-            this.txtidhoadon.TabIndex = 57;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // addHD
             // 
@@ -466,6 +477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.updownsl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updownsize)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -496,7 +508,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtnamesp;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -507,5 +518,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox txtidnv;
         private System.Windows.Forms.TextBox txtidhoadon;
+        private System.Windows.Forms.Label lbtongtien;
+        private System.Windows.Forms.TextBox txttongtien;
     }
 }

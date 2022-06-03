@@ -52,6 +52,35 @@ namespace WindowsFormsApp1.BLL
             }
             db.SaveChanges();
         }
+        public void UpdateTongSLSPbyMaSP(string Ma,int SLtru)
+        {
+            var l1 = db.SanPhams.Where(p => p.MSP == Ma).FirstOrDefault();
+            l1.TongSLSP = l1.TongSLSP - SLtru;
+            db.SaveChanges(); 
+        }
+        public int GetSLSPByMSPandSize(string MSP, int size)
+        {
+
+            if (db.SoLuongSPs.Where(p => p.MSP == MSP && p.Size == size).FirstOrDefault() == null)
+                return 0; 
+            else  return db.SoLuongSPs.Where(p => p.MSP == MSP && p.Size == size).ToList().FirstOrDefault().SoLuong;
+            return 0; 
+          
+        }
+        public void AddHoaDon(HoaDon s)
+        {
+            db.Hoadons.Add(s);
+            db.SaveChanges(); 
+        }
+        public void AddChitiethoadon(ChiTietHoaDon s)
+        {
+            db.ChiTietHoaDons.Add(s);
+            db.SaveChanges(); 
+        }
+        public List<HoaDon> GetListHD()
+        {
+            return db.Hoadons.Select(p => p).ToList(); 
+        }
         public void AddSLSP(SoLuongSP s)
         {
             if (CheckSL(s.MSP,s.Size) == false)
@@ -140,6 +169,10 @@ namespace WindowsFormsApp1.BLL
                 return true;
             return false;
         }
+        public int  GetGiaThanhByMaSP(string MA)
+        {
+            return Convert.ToInt32(db.SanPhams.Where(p => p.MSP == MA).ToList().FirstOrDefault().GiaSP); 
+        }
         public List<NhanVienView> GetNhanvienViews(List<NhanVien> a)
         {
             List<NhanVienView> nv = new List<NhanVienView>();
@@ -190,6 +223,11 @@ namespace WindowsFormsApp1.BLL
             db.Accounts.Remove(db.Accounts.Find(db.Accounts.Where(p => p.TenDangNhap == MNV).ToList().FirstOrDefault().ID));
             db.SaveChanges();
         }
+        public void DelHD(string MHD)
+        {
+            db.Hoadons.Remove(db.Hoadons.Find(MHD));
+            db.SaveChanges(); 
+        }
 
 
         public NhanVien GetNVByMaNV(string MNV)
@@ -201,7 +239,7 @@ namespace WindowsFormsApp1.BLL
         {
             if (db.Hoadons.OrderBy(p => p.MaHD).FirstOrDefault() == null)
                 return 1;
-            else return  (Convert.ToInt32( db.Hoadons.OrderBy(p => p.MaHD).ToList().FirstOrDefault().MaHD) + 1);
+            else return  (Convert.ToInt32( db.Hoadons.OrderByDescending(p => p.MaHD).ToList().FirstOrDefault().MaHD) + 1);
             return 1; 
         }
         public List<NhanVien> SortNV(string type)
