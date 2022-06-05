@@ -20,8 +20,15 @@ namespace WindowsFormsApp1
         {
             MA = MA1; 
             InitializeComponent();
-            showHD(); 
+            showHD();
+            setcbb();
+        }
 
+        public void setcbb()
+        {
+            cbbSort.Items.Add("Ma hoa don");
+            cbbSort.Items.Add("Tong so luong");
+            cbbSort.Items.Add("Tong tien");
         }
         public void GUI()
         {
@@ -39,15 +46,7 @@ namespace WindowsFormsApp1
             a.Show();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -64,6 +63,16 @@ namespace WindowsFormsApp1
                 }
             }
             showHD(); 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = QLSHOPBLL.instance.SortHD(cbbSort.SelectedItem.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = QLSHOPBLL.instance.SearchHD(txtSearch.Text);
         }
     }
 }

@@ -326,5 +326,35 @@ namespace WindowsFormsApp1.BLL
             return data;
         }
 
+        public List<HoaDon> SortHD(string type)
+        {
+            List<HoaDon> data = QLSHOPBLL.instance.GetListHD();
+            switch (type)
+            {
+                case "Ma hoa don":
+                    {
+                        data = db.Hoadons.OrderBy(p => p.MaHD).ToList();
+                        break;
+                    }
+                case "Tong so luong":
+                    {
+                        data = db.Hoadons.OrderBy(p => p.TongSL).ToList();
+                        break;
+                    }
+                case "Tong tien":
+                    {
+                        data = db.Hoadons.OrderBy(p => p.TongTien).ToList();
+                        break;
+                    }
+            }
+            return data;
+        }
+
+        public List<HoaDon> SearchHD(string s)
+        {
+            List<HoaDon> data = new List<HoaDon>();
+            data = db.Hoadons.Where(p => p.MaHD.Contains(s) || p.MaNV.Contains(s)).Select(p=>p).ToList();
+            return data;
+        }
     }
 }
