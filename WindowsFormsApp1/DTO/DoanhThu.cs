@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.DTO
 {
-    public class DoanhThuThang
+    public class DoanhThu
     {
         [Key]
         public int ID { get; set; }
-        public int Tuan1 { get; set; }
-        public int Tuan2 { get; set; }
-        public int Tuan3 { get; set; }
-        public int Tuan4 { get; set; }
+        public DateTime NgayThang { get; set; }
+        public int Tongtien { get; set;  }
+
     }
 }
