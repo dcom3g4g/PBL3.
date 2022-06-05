@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         public Employee_user Employeeuser;
         //public Employee_user Employeeuser = new Employee_user();
      
-        public SPofNVusercontrol sp = new SPofNVusercontrol();
+        //public SPofNVusercontrol sp = new SPofNVusercontrol();
       
         //public Hoadon hd = new Hoadon();
        // public Employee_user Employeeuser = new Employee_user();
