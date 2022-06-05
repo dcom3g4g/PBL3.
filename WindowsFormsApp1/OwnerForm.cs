@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
         //public sanpham sp = new sanpham();
         public Hoadon hd=new Hoadon("");
         public SanPhamUserControl sp = new SanPhamUserControl();
-        //public Hoadon hd=new Hoadon();
+       // public Hoadon hd=new Hoadon();
         public static OwnerForm Instance
         {
             get
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OwnerForm.Instance.PannelContain_.Controls["sanpham"].BringToFront();
+            OwnerForm.Instance.PannelContain_.Controls["SanPhamUserControl"].BringToFront();
         }
 
         private void button6_Click(object sender, EventArgs e)

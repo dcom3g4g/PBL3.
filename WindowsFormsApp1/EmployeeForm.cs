@@ -11,13 +11,21 @@ using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
     public partial class EmployeeForm : Form
-    {   
-        public static string Ma = ""; 
+    {
+        public static string Ma = "";
         static EmployeeForm _obj;
+
+        // public sanpham sp = new sanpham();
+        public Hoadon hd;
         
         //public sanpham sp = new sanpham();
         public Hoadon hd ;
         public Employee_user Employeeuser;
+        //public Employee_user Employeeuser = new Employee_user();
+     
+        public SPofNVusercontrol sp = new SPofNVusercontrol();
+      
+        //public Hoadon hd = new Hoadon();
        // public Employee_user Employeeuser = new Employee_user();
         public SanPhamUserControl sanpham = new SanPhamUserControl();
         //public Hoadon hd = new Hoadon();
@@ -38,11 +46,13 @@ namespace WindowsFormsApp1
             get { return panel4; }
             set { panel4 = value; }
         }
+        
         public EmployeeForm(string MANV)
         { 
             Ma = MANV;
             Employee_user Employeeuser = new Employee_user(Ma);
             Hoadon hd = new Hoadon(Ma);
+            
             InitializeComponent();
            
         }
@@ -69,6 +79,8 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             //EmployeeForm.Instance.panel4_.Controls[]
+            EmployeeForm.Instance.panel4_.Controls["SPofNVusercontrol"].BringToFront();
+            
            
             EmployeeForm.Instance.panel4_.Controls["sanpham"].BringToFront();
             sanpham.ShowSP();
@@ -77,6 +89,7 @@ namespace WindowsFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
             EmployeeForm.Instance.panel4_.Controls["Hoadon"].BringToFront();
+            
            
         }
 

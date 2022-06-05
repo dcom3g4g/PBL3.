@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             ShowSP();
             setcbb();
+       
+            
         }
 
         public void setcbb()
