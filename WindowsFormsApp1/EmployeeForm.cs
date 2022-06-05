@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         public Hoadon hd;
         
         //public sanpham sp = new sanpham();
-        public Hoadon hd ;
+ 
         public Employee_user Employeeuser;
         //public Employee_user Employeeuser = new Employee_user();
      
@@ -79,10 +79,10 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             //EmployeeForm.Instance.panel4_.Controls[]
-            EmployeeForm.Instance.panel4_.Controls["SPofNVusercontrol"].BringToFront();
+            //EmployeeForm.Instance.panel4_.Controls["SPofNVusercontrol"].BringToFront();
             
            
-            EmployeeForm.Instance.panel4_.Controls["sanpham"].BringToFront();
+            EmployeeForm.Instance.panel4_.Controls["SanPhamUserControl"].BringToFront();
             sanpham.ShowSP();
         }
 
