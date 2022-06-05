@@ -17,15 +17,17 @@ namespace WindowsFormsApp1
         public delegate void Mydel();
         public Mydel d { get; set; }
         public string MNV;
-        public AddNV(string MaNV)
+        public AddNV(string MaNV,int x)
         {
             InitializeComponent();
             MNV = MaNV;
-            GUI();
+            GUI(x);
         }
 
-        public void GUI()
+        public void GUI(int y)
         {
+            butClear.Visible = true; 
+            ButSave.Visible = true;
             NhanVien s = QLSHOPBLL.instance.GetNVByMaNV(MNV);
             if(MNV != "")
             {
@@ -41,8 +43,14 @@ namespace WindowsFormsApp1
                     rdMale.Checked = true;
                 else
                     rdFemale.Checked = true;
-
+                //if (y == 1)
+                //{
+                //    butClear.Visible = false;
+                //    ButSave.Visible = false;
+                //}
             }
+            //butClear.Visible = false;
+            //butClear.Visible = true; 
         }
 
         

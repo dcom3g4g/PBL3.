@@ -19,11 +19,7 @@ namespace WindowsFormsApp1.DTO
             Console.WriteLine("co tao 111");
         }
         public virtual DbSet<Account> Accounts { get; set; }
-
-        public virtual DbSet<DoanhThuTuan> DoanhThuTuans { get; set; }
-
-        public virtual DbSet<DoanhThuThang> DoanhThuThangs { get; set; }
-        public virtual DbSet<DoanhThuNam> DoanhThuNams { get; set; }
+        public virtual DbSet<DoanhThu> DoanhThuNams { get; set; }
         public virtual DbSet<NhanVien> Nhanviens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<HoaDon> Hoadons { get; set; }

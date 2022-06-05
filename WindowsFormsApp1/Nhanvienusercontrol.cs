@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
 
         private void butAdd_Click(object sender, EventArgs e)
         {
-            AddNV f = new AddNV("");
+            AddNV f = new AddNV("",0);
             f.d = new AddNV.Mydel(showNV);
 
             f.Show();
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
         {
             if(dataGridView1.SelectedRows.Count == 1)
             {
-                AddNV f = new AddNV(dataGridView1.SelectedRows[0].Cells["MaNV"].Value.ToString());
+                AddNV f = new AddNV(dataGridView1.SelectedRows[0].Cells["MaNV"].Value.ToString(),1);
                 f.d = new AddNV.Mydel(showNV);
                 f.Show();
             }

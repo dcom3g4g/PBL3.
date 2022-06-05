@@ -72,6 +72,20 @@ namespace WindowsFormsApp1.BLL
             db.Hoadons.Add(s);
             db.SaveChanges(); 
         }
+        public void AddDoanhThu(int ngay, int thang, int nam, DoanhThu s)
+        {
+            if (db.DoanhThuNams.Where(p=>p.NgayThang.Day==ngay && p.NgayThang.Month==thang && p.NgayThang.Year==nam).FirstOrDefault()==null)
+            {
+                db.DoanhThuNams.Add(s);
+                db.SaveChanges(); 
+            }
+            else 
+            {
+                var l1 = db.DoanhThuNams.Where(p => p.NgayThang.Day == ngay && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList().FirstOrDefault();
+                l1.Tongtien = l1.Tongtien + s.Tongtien;
+                db.SaveChanges(); 
+            }
+        }
         public void AddChitiethoadon(ChiTietHoaDon s)
         {
             db.ChiTietHoaDons.Add(s);

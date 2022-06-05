@@ -36,8 +36,7 @@ namespace WindowsFormsApp1
             {
                 cbidsp.Items.Add(i.MSP); 
             }
-            //updownsl.Maximum = (QLSHOPBLL.instance.GetSLSPByMSPandSize(cbidsp.SelectedItem.ToString(), Convert.ToInt32(updownsize.Value)));
-            //updownsl.Minimum = 0;
+            
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -61,8 +60,9 @@ namespace WindowsFormsApp1
 
         private void cbidsp_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtnamesp.Text = QLSHOPBLL.instance.GetSPbyMaSP(cbidsp.SelectedItem.ToString()).TenSP; 
-
+            txtnamesp.Text = QLSHOPBLL.instance.GetSPbyMaSP(cbidsp.SelectedItem.ToString()).TenSP;
+            updownsl.Maximum = (QLSHOPBLL.instance.GetSLSPByMSPandSize(cbidsp.SelectedItem.ToString(), Convert.ToInt32(updownsize.Value)));
+            updownsl.Minimum = 0;
         }
 
         private void updownsize_ValueChanged(object sender, EventArgs e)
@@ -134,13 +134,14 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            QLSHOPBLL.instance.AddHoaDon(new HoaDon { MaHD=txtidhoadon.Text, MaNV = MA, TongSL = TotalSLSP(), TongTien = Total() });
+            QLSHOPBLL.instance.AddHoaDon(new HoaDon { MaHD=txtidhoadon.Text, MaNV = MA, TongSL = TotalSLSP(), TongTien = Total() ,NgayThang=DateTime.Now});
             foreach (ChiTietHoaDonView i in list)
             {
                 QLSHOPBLL.instance.AddChitiethoadon(new ChiTietHoaDon { MaHD = txtidhoadon.Text, MSP = i.MaSP, Size = i.Size, SoLuong = i.SoLuong });
                 QLSHOPBLL.instance.AddSLSP(new SoLuongSP { MSP = i.MaSP, Size = i.Size, SoLuong = QLSHOPBLL.instance.GetSLSPByMSPandSize(i.MaSP,i.Size)- i.SoLuong }); ;
                 QLSHOPBLL.instance.UpdateTongSLSPbyMaSP(i.MaSP, i.SoLuong); 
             }
+            QLSHOPBLL.instance.AddDoanhThu(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, new DoanhThu { NgayThang = DateTime.Now, Tongtien = Total() }); 
             d();
             this.Close();
         }
