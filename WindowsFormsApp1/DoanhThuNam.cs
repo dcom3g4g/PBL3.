@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApp1.BLL;
 namespace WindowsFormsApp1
 {
     public partial class DoanhThuNam : UserControl
@@ -24,10 +24,10 @@ namespace WindowsFormsApp1
         }
         private void loaddl()
         {
-            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 1", 150);
-            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 2", 120);
-            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 3", 300);
-            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 4", 150);
+            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 1", QLSHOPBLL.instance.GetDoanhThuNam(1,DateTime.Now.Year));
+            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 2", QLSHOPBLL.instance.GetDoanhThuNam(2, DateTime.Now.Year));
+            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 3", QLSHOPBLL.instance.GetDoanhThuNam(3, DateTime.Now.Year));
+            chartnam.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Qúy 4", QLSHOPBLL.instance.GetDoanhThuNam(4, DateTime.Now.Year));
         }
         private void button2_Click(object sender, EventArgs e)
         {

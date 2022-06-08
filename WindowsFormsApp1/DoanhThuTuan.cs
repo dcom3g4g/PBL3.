@@ -11,9 +11,9 @@ using WindowsFormsApp1.BLL;
 
 namespace WindowsFormsApp1
 {
-    public partial class DoanhThuNgay : UserControl
+    public partial class DoanhThuTuan : UserControl
     {
-        public DoanhThuNgay()
+        public DoanhThuTuan()
         {
             InitializeComponent();
             Loaddl(); 
@@ -23,7 +23,6 @@ namespace WindowsFormsApp1
         {
             OwnerForm.Instance.PannelContain_.Controls["DoanhThuThang"].BringToFront();
         }
-
         private void Loaddl()
         {
             int d=0;
