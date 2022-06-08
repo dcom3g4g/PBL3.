@@ -22,11 +22,11 @@ namespace WindowsFormsApp1
         public Employee_user Employeeuser;
         //public Employee_user Employeeuser = new Employee_user();
      
-        //public SPofNVusercontrol sp = new SPofNVusercontrol();
+       // public SPofNVusercontrol sanpham = new SPofNVusercontrol();
       
         //public Hoadon hd = new Hoadon();
        // public Employee_user Employeeuser = new Employee_user();
-        public SanPhamUserControl sanpham = new SanPhamUserControl();
+       public SanPhamUserControl sanpham = new SanPhamUserControl(1);
         //public Hoadon hd = new Hoadon();
 
         public static EmployeeForm Instance

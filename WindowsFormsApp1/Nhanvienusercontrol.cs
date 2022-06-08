@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             showNV();
             setcbb(); 
-            dataGridView1.DataSource = QLSHOPBLL.instance.GetListNhanVien();
+            
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
         {
             if(dataGridView1.SelectedRows.Count == 1)
             {
-                AddNV f = new AddNV(dataGridView1.SelectedRows[0].Cells["MaNV"].Value.ToString(),1);
+                AddNV f = new AddNV(dataGridView1.SelectedRows[0].Cells["MaNV"].Value.ToString(),0);
                 f.d = new AddNV.Mydel(showNV);
                 f.Show();
             }
@@ -76,7 +76,12 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                AddNV f = new AddNV(dataGridView1.SelectedRows[0].Cells["MaNV"].Value.ToString(), 1);
+                f.d = new AddNV.Mydel(showNV);
+                f.Show();
+            }
         }
     }
 }

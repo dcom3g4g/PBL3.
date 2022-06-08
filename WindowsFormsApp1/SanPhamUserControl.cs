@@ -13,13 +13,18 @@ namespace WindowsFormsApp1
 {
     public partial class SanPhamUserControl : UserControl
     {
-        public SanPhamUserControl()
+        public SanPhamUserControl(int x)
         {
             
             InitializeComponent();
             ShowSP();
             setcbb();
-       
+            if (x == 1)
+            {
+                btadd.Visible = false;
+                btdelete.Visible = false;
+                btupdate.Visible = false;
+            }
             
         }
 
@@ -38,13 +43,13 @@ namespace WindowsFormsApp1
         }
         private void butadd_Click(object sender, EventArgs e)
         {
-            ChiTietSP f = new ChiTietSP("");
+            ChiTietSP f = new ChiTietSP("",0);
             f.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ChiTietSP f = new ChiTietSP("");
+            ChiTietSP f = new ChiTietSP("",0);
             f.d = new ChiTietSP.Mydel(ShowSP);
             f.Show(); 
             //ShowSP();
@@ -54,7 +59,7 @@ namespace WindowsFormsApp1
         {
             if (dataGridView1.SelectedRows.Count == 1)
             {
-                ChiTietSP f = new ChiTietSP(dataGridView1.SelectedRows[0].Cells["MSP"].Value.ToString());
+                ChiTietSP f = new ChiTietSP(dataGridView1.SelectedRows[0].Cells["MSP"].Value.ToString(),0);
                 f.d = new ChiTietSP.Mydel(ShowSP);
                 f.Show();
             }
@@ -82,6 +87,16 @@ namespace WindowsFormsApp1
         {
             dataGridView1.DataSource = QLSHOPBLL.instance.GetSPView(QLSHOPBLL.instance.SearchSP(txtSearch.Text));
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                ChiTietSP f = new ChiTietSP(dataGridView1.SelectedRows[0].Cells["MSP"].Value.ToString(),1);
+                f.d = new ChiTietSP.Mydel(ShowSP);
+                f.Show();
+            }
         }
     }
 }

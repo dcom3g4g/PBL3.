@@ -179,12 +179,6 @@
     <Compile Include="SanPhamUserControl.Designer.cs">
       <DependentUpon>SanPhamUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="SPofNVusercontrol.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SPofNVusercontrol.Designer.cs">
-      <DependentUpon>SPofNVusercontrol.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="addHD.resx">
       <DependentUpon>addHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,9 +242,6 @@
     </Compile>
     <EmbeddedResource Include="SanPhamUserControl.resx">
       <DependentUpon>SanPhamUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SPofNVusercontrol.resx">
-      <DependentUpon>SPofNVusercontrol.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

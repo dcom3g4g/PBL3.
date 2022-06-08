@@ -17,11 +17,30 @@ namespace WindowsFormsApp1
         public delegate void Mydel();
         public Mydel d { get; set; }
         public string MSP;  
-        public ChiTietSP(string MaSP)
+        public ChiTietSP(string MaSP, int x)
         {
             InitializeComponent();
             MSP = MaSP;
-            GUI();         }
+            GUI();        
+            if(x ==1)
+            {
+                button1.Visible = false;
+                Txtpic.Enabled = false;
+                txtID.Enabled = false;
+                txtName.Enabled = false;
+                txtPrice.Enabled = false;
+                txtSize36.Enabled = false;
+                txtSize37.Enabled = false;
+                txtSize38.Enabled = false;
+                txtSize39.Enabled = false;
+                txtSize40.Enabled = false;
+                txtSize41.Enabled = false;
+                txtSize42.Enabled = false;
+                txtSize43.Enabled = false;
+
+
+            }    
+        }
         public void GUI()
         {
             SanPham s= QLSHOPBLL.instance.GetSPbyMaSP(MSP);

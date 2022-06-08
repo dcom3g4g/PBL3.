@@ -26,8 +26,21 @@ namespace WindowsFormsApp1
 
         public void GUI(int y)
         {
-            butClear.Visible = true; 
-            ButSave.Visible = true;
+            if (y == 1)
+            {
+                butClear.Visible = false;
+                ButSave.Visible = false;
+                txtName.Enabled = false;
+                Txtngaysinh.Enabled = false;
+                txtSDT.Enabled = false;
+                txtLuong.Enabled = false;
+                txtGmail.Enabled = false;   
+                txtaddress.Enabled = false;
+                rdFemale.Enabled = false;
+                rdMale.Enabled = false;
+
+            }
+            
             NhanVien s = QLSHOPBLL.instance.GetNVByMaNV(MNV);
             if(MNV != "")
             {
