@@ -248,7 +248,13 @@ namespace WindowsFormsApp1.BLL
         {
             return db.Nhanviens.Where(p => p.MaNV == MNV).ToList().FirstOrDefault();
         }
-
+        public int GetDoanhThuTrongNgay(int ngay , int thang , int nam)
+        {
+            if (db.DoanhThuNams.Where(p => p.NgayThang.Day == ngay && p.NgayThang.Month == thang && p.NgayThang.Year == nam).FirstOrDefault() == null)
+                return 0;
+            else return db.DoanhThuNams.Where(p => p.NgayThang.Day == ngay && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList().FirstOrDefault().Tongtien;
+            return 0; 
+        }
         public int GetMaHDLast()
         {
             if (db.Hoadons.OrderBy(p => p.MaHD).FirstOrDefault() == null)
