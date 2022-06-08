@@ -117,6 +117,7 @@
     <Compile Include="DTO\ChiTietHoaDonView.cs" />
     <Compile Include="DTO\DoanhThu.cs" />
     <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\Hoadonview.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\NhanVienView.cs" />
     <Compile Include="DTO\SanPham.cs" />

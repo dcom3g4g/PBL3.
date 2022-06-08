@@ -370,5 +370,23 @@ namespace WindowsFormsApp1.BLL
             data = db.Hoadons.Where(p => p.MaHD.Contains(s) || p.MaNV.Contains(s)).Select(p=>p).ToList();
             return data;
         }
+
+        public List<Hoadonview> GetHoaDonView(List<HoaDon> a)
+        {
+            List<Hoadonview> data = new List<Hoadonview>();
+            foreach (HoaDon i in a)
+            {
+                data.Add(new Hoadonview
+                {
+                    MaHD = i.MaHD,
+                    NgayThang = i.NgayThang,
+                    TongSL = i.TongSL,
+                    TongTien = i.TongTien,
+                    MaNV = i.MaNV,
+                });
+            }
+            return data;
+        }
+
     }
 }

@@ -36,7 +36,8 @@ namespace WindowsFormsApp1
         }
         public void showHD()
         {
-            dataGridView1.DataSource = (QLSHOPBLL.instance.GetListHD());
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.GetListHD());
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -67,12 +68,14 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = QLSHOPBLL.instance.SortHD(cbbSort.SelectedItem.ToString());
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.SortHD(cbbSort.SelectedItem.ToString()));
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = QLSHOPBLL.instance.SearchHD(txtSearch.Text);
+            dataGridView1.DataSource =QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.SearchHD(txtSearch.Text));
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

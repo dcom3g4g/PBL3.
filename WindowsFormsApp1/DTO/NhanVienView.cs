@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.DTO
 {
-    internal class NhanVienView
+    public class NhanVienView
     {
         public string MaNV { get; set; }
         public string Name { get; set; }
