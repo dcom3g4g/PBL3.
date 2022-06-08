@@ -105,11 +105,11 @@
     <Compile Include="DoanhThuThang.Designer.cs">
       <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoanhThuTuan.cs">
+    <Compile Include="DoanhThuNgay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DoanhThuTuan.Designer.cs">
-      <DependentUpon>DoanhThuTuan.cs</DependentUpon>
+    <Compile Include="DoanhThuNgay.Designer.cs">
+      <DependentUpon>DoanhThuNgay.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs" />
@@ -117,6 +117,7 @@
     <Compile Include="DTO\ChiTietHoaDonView.cs" />
     <Compile Include="DTO\DoanhThu.cs" />
     <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\Hoadonview.cs" />
     <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\NhanVienView.cs" />
     <Compile Include="DTO\SanPham.cs" />
@@ -203,8 +204,8 @@
     <EmbeddedResource Include="DoanhThuThang.resx">
       <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThuTuan.resx">
-      <DependentUpon>DoanhThuTuan.cs</DependentUpon>
+    <EmbeddedResource Include="DoanhThuNgay.resx">
+      <DependentUpon>DoanhThuNgay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>

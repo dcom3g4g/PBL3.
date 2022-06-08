@@ -75,8 +75,9 @@ namespace WindowsFormsApp1
         {
             dataGridView1.DataSource = null; 
             dataGridView1.DataSource = a;
-            txttongtien.Text = Total().ToString(); 
-            
+            txttongtien.Text = Total().ToString();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
         public int Total ()
         {

@@ -248,7 +248,13 @@ namespace WindowsFormsApp1.BLL
         {
             return db.Nhanviens.Where(p => p.MaNV == MNV).ToList().FirstOrDefault();
         }
-
+        public int GetDoanhThuTrongNgay(int ngay , int thang , int nam)
+        {
+            if (db.DoanhThuNams.Where(p => p.NgayThang.Day == ngay && p.NgayThang.Month == thang && p.NgayThang.Year == nam).FirstOrDefault() == null)
+                return 0;
+            else return db.DoanhThuNams.Where(p => p.NgayThang.Day == ngay && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList().FirstOrDefault().Tongtien;
+            return 0; 
+        }
         public int GetMaHDLast()
         {
             if (db.Hoadons.OrderBy(p => p.MaHD).FirstOrDefault() == null)
@@ -370,5 +376,23 @@ namespace WindowsFormsApp1.BLL
             data = db.Hoadons.Where(p => p.MaHD.Contains(s) || p.MaNV.Contains(s)).Select(p=>p).ToList();
             return data;
         }
+
+        public List<Hoadonview> GetHoaDonView(List<HoaDon> a)
+        {
+            List<Hoadonview> data = new List<Hoadonview>();
+            foreach (HoaDon i in a)
+            {
+                data.Add(new Hoadonview
+                {
+                    MaHD = i.MaHD,
+                    NgayThang = i.NgayThang,
+                    TongSL = i.TongSL,
+                    TongTien = i.TongTien,
+                    MaNV = i.MaNV,
+                });
+            }
+            return data;
+        }
+
     }
 }
