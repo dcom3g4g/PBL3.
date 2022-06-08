@@ -35,9 +35,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.cbbngay = new System.Windows.Forms.ComboBox();
+            this.cbbthang = new System.Windows.Forms.ComboBox();
+            this.cbbnam = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +50,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.Highlight;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(209, 817);
+            this.button5.Location = new System.Drawing.Point(219, 817);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(164, 66);
             this.button5.TabIndex = 37;
@@ -84,7 +88,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(48, 136);
             this.dataGridView1.Name = "dataGridView1";
@@ -115,29 +119,6 @@
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(524, 817);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 66);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(806, 817);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 66);
-            this.button4.TabIndex = 37;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.Highlight;
@@ -150,13 +131,77 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // cbbngay
+            // 
+            this.cbbngay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.cbbngay.FormattingEnabled = true;
+            this.cbbngay.Location = new System.Drawing.Point(767, 56);
+            this.cbbngay.Name = "cbbngay";
+            this.cbbngay.Size = new System.Drawing.Size(85, 37);
+            this.cbbngay.TabIndex = 38;
+            // 
+            // cbbthang
+            // 
+            this.cbbthang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.cbbthang.FormattingEnabled = true;
+            this.cbbthang.Location = new System.Drawing.Point(960, 55);
+            this.cbbthang.Name = "cbbthang";
+            this.cbbthang.Size = new System.Drawing.Size(85, 37);
+            this.cbbthang.TabIndex = 39;
+            // 
+            // cbbnam
+            // 
+            this.cbbnam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.cbbnam.FormattingEnabled = true;
+            this.cbbnam.Location = new System.Drawing.Point(1154, 56);
+            this.cbbnam.Name = "cbbnam";
+            this.cbbnam.Size = new System.Drawing.Size(85, 37);
+            this.cbbnam.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(679, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 29);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(875, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 29);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Month";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(1075, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 29);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Year";
+            // 
             // Hoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbbnam);
+            this.Controls.Add(this.cbbthang);
+            this.Controls.Add(this.cbbngay);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -181,8 +226,12 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox cbbngay;
+        private System.Windows.Forms.ComboBox cbbthang;
+        private System.Windows.Forms.ComboBox cbbnam;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

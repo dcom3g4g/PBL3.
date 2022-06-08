@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
         { 
             Ma = MANV;
             Employee_user Employeeuser = new Employee_user(Ma);
-            Hoadon hd = new Hoadon(Ma);
+            Hoadon hd = new Hoadon(Ma,0);
             
             InitializeComponent();
            
@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
         {
             _obj = this;
             Employee_user Employeeuser = new Employee_user(Ma);
-            Hoadon hd = new Hoadon(Ma);
+            Hoadon hd = new Hoadon(Ma,0);
             sanpham.Dock = DockStyle.Fill;
             panel4.Controls.Add(sanpham);
             hd.Dock = DockStyle.Fill;

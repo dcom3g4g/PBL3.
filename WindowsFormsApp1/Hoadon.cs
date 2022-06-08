@@ -16,12 +16,16 @@ namespace WindowsFormsApp1
     {
         // QLSHOPBLL QL = new QLSHOPBLL(); 
         public string MA = ""; 
-        public Hoadon(string MA1)
+        public Hoadon(string MA1,int x)
         {
             MA = MA1; 
             InitializeComponent();
             showHD();
             setcbb();
+            if(x ==1)
+            {
+                button5.Visible = false;
+            }    
         }
 
         public void setcbb()

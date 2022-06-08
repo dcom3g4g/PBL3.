@@ -51,77 +51,77 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("VNI-Dom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label7.Location = new System.Drawing.Point(1100, 366);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 32);
+            this.label7.Size = new System.Drawing.Size(74, 29);
             this.label7.TabIndex = 29;
             this.label7.Text = "Email";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("VNI-Dom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label6.Location = new System.Drawing.Point(1100, 264);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 32);
+            this.label6.Size = new System.Drawing.Size(171, 29);
             this.label6.TabIndex = 28;
             this.label6.Text = "Phone number";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("VNI-Dom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label5.Location = new System.Drawing.Point(1100, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 32);
+            this.label5.Size = new System.Drawing.Size(102, 29);
             this.label5.TabIndex = 27;
             this.label5.Text = "Address";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("VNI-Dom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label4.Location = new System.Drawing.Point(100, 469);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 32);
+            this.label4.Size = new System.Drawing.Size(142, 29);
             this.label4.TabIndex = 26;
             this.label4.Text = "Date of birth";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("VNI-Dom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label3.Location = new System.Drawing.Point(100, 371);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 32);
+            this.label3.Size = new System.Drawing.Size(94, 29);
             this.label3.TabIndex = 25;
             this.label3.Text = "Gender";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("VNI-Dom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(100, 264);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 32);
+            this.label1.Size = new System.Drawing.Size(78, 29);
             this.label1.TabIndex = 24;
             this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("VNI-Dom", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Location = new System.Drawing.Point(100, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 32);
+            this.label2.Size = new System.Drawing.Size(36, 29);
             this.label2.TabIndex = 23;
             this.label2.Text = "ID";
             // 

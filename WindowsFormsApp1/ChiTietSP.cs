@@ -24,6 +24,8 @@ namespace WindowsFormsApp1
             GUI();        
             if(x ==1)
             {
+                button2.Visible = false;
+                button3.Visible = false;
                 button1.Visible = false;
                 Txtpic.Enabled = false;
                 txtID.Enabled = false;
