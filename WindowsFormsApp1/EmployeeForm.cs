@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
         public Hoadon hd;
         
         //public sanpham sp = new sanpham();
+ 
         public Employee_user Employeeuser;
         //public Employee_user Employeeuser = new Employee_user();
      
