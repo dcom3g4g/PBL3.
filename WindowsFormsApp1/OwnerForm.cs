@@ -6,7 +6,7 @@ namespace WindowsFormsApp1
     public partial class OwnerForm : Form
     {
         static OwnerForm _obj;
-        public DoanhThuNgay dtt = new DoanhThuNgay();
+        public DoanhThuTuan dtt = new DoanhThuTuan();
         public DoanhThuThang dthuthang = new DoanhThuThang();
         public DoanhThuNam dtn = new DoanhThuNam();
         public Nhanvienusercontrol nv = new Nhanvienusercontrol();

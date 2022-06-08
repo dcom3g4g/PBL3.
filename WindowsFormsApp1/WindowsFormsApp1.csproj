@@ -105,11 +105,11 @@
     <Compile Include="DoanhThuThang.Designer.cs">
       <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoanhThuNgay.cs">
+    <Compile Include="DoanhThuTuan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DoanhThuNgay.Designer.cs">
-      <DependentUpon>DoanhThuNgay.cs</DependentUpon>
+    <Compile Include="DoanhThuTuan.Designer.cs">
+      <DependentUpon>DoanhThuTuan.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs" />
@@ -204,8 +204,8 @@
     <EmbeddedResource Include="DoanhThuThang.resx">
       <DependentUpon>DoanhThuThang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThuNgay.resx">
-      <DependentUpon>DoanhThuNgay.cs</DependentUpon>
+    <EmbeddedResource Include="DoanhThuTuan.resx">
+      <DependentUpon>DoanhThuTuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>

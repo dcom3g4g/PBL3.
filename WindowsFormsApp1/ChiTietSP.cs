@@ -116,5 +116,10 @@ namespace WindowsFormsApp1
                 Txtpic.Text = file.FileName;
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
