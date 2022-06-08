@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL; 
 
 namespace WindowsFormsApp1
 {
@@ -24,10 +25,10 @@ namespace WindowsFormsApp1
         }
         private void loaddl()
         {
-            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 1", 15);
-            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 2", 20);
-            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 3", 40);
-            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 4", 19);
+            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 1", QLSHOPBLL.instance.GetDoanhThuThang(1,DateTime.Now.Month,DateTime.Now.Year));
+            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 2", QLSHOPBLL.instance.GetDoanhThuThang(2, DateTime.Now.Month, DateTime.Now.Year));
+            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 3", QLSHOPBLL.instance.GetDoanhThuThang(3, DateTime.Now.Month, DateTime.Now.Year));
+            chartthang.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Tuần 4", QLSHOPBLL.instance.GetDoanhThuThang(4, DateTime.Now.Month, DateTime.Now.Year));
         }
         private void button2_Click(object sender, EventArgs e)
         {

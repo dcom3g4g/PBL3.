@@ -255,6 +255,66 @@ namespace WindowsFormsApp1.BLL
             else return db.DoanhThuNams.Where(p => p.NgayThang.Day == ngay && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList().FirstOrDefault().Tongtien;
             return 0; 
         }
+        public double GetDoanhThuThang(int tuan,int thang, int nam)
+        {
+            double x = 0; 
+            if (tuan==1)
+            {
+                foreach (DoanhThu i in db.DoanhThuNams.Where(p => p.NgayThang.Day <= 7 && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList())
+                {
+                    x += i.Tongtien; 
+                }
+            }
+            if (tuan == 2)
+            {
+                foreach (DoanhThu i in db.DoanhThuNams.Where(p => p.NgayThang.Day <= 14 && p.NgayThang.Day>7 && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList())
+                {
+                    x += i.Tongtien;
+                }
+            }
+            if (tuan == 3)
+            {
+                foreach (DoanhThu i in db.DoanhThuNams.Where(p => p.NgayThang.Day <= 21 && p.NgayThang.Day > 14 && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList())
+                {
+                    x += i.Tongtien;
+                }
+            }
+            if (tuan == 4)
+            {
+                foreach (DoanhThu i in db.DoanhThuNams.Where(p => p.NgayThang.Day <= 28 && p.NgayThang.Day > 21 && p.NgayThang.Month == thang && p.NgayThang.Year == nam).ToList())
+                {
+                    x += i.Tongtien;
+                }
+            }
+            return x;
+        }
+        public double GetDoanhThuNam( int quy, int nam)
+        {
+            double x = 0;
+            if (quy==1)
+            foreach (DoanhThu i in db.DoanhThuNams.Where( p=>p.NgayThang.Month >=1 && p.NgayThang.Month < 4 && p.NgayThang.Year == nam).ToList())
+            {
+                x += i.Tongtien;
+            }
+            if (quy == 2)
+            foreach (DoanhThu i in db.DoanhThuNams.Where(p => p.NgayThang.Month >= 4 && p.NgayThang.Month < 7 && p.NgayThang.Year == nam).ToList())
+            {
+                x += i.Tongtien;
+            }
+            if (quy == 3)
+            foreach (DoanhThu i in db.DoanhThuNams.Where(p => p.NgayThang.Month >= 7 && p.NgayThang.Month < 10 && p.NgayThang.Year == nam).ToList())
+            {
+                x += i.Tongtien;
+            }
+            if (quy == 4)
+            foreach (DoanhThu i in db.DoanhThuNams.Where(p => p.NgayThang.Month >= 10 && p.NgayThang.Month < 13 && p.NgayThang.Year == nam).ToList())
+            {
+                x += i.Tongtien;
+            }
+
+            return x;
+        }
+
         public int GetMaHDLast()
         {
             if (db.Hoadons.OrderBy(p => p.MaHD).FirstOrDefault() == null)
