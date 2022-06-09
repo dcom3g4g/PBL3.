@@ -47,7 +47,8 @@ namespace WindowsFormsApp1
         {
             SanPham s= QLSHOPBLL.instance.GetSPbyMaSP(MSP);
             
-            if (MSP!="")
+
+            if (MSP != "")
             {
                 pictureBox1.Image = new Bitmap(s.Link);
                 txtID.Text = MSP;
@@ -76,7 +77,16 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-     
+            if (pictureBox1.Image == null || txtID.Text == "" || Txtpic.Text == "" || txtName.Text == "" || txtPrice.Text == ""
+                || txtSize36.Text == "" || txtSize37.Text == "" || txtSize38.Text == "" || txtSize39.Text == "" || txtSize40.Text == "" || txtSize41.Text == ""
+                || txtSize42.Text == "" || txtSize43.Text == "")
+                MessageBox.Show("co thuoc tinh chua duoc nhap");
+            else if (txtSize36.Text == "0" && txtSize37.Text == "0" && txtSize38.Text == "0" && txtSize39.Text == "0" && txtSize40.Text == "0" && txtSize41.Text == "0"
+                && txtSize42.Text == "0" && txtSize43.Text == "0")
+                MessageBox.Show("so luong phai lon hon 0");
+            else
+            {
+
                 QLSHOPBLL.instance.AddUpdateSP(new SanPham
                 {
                     MSP = txtID.Text,
@@ -95,6 +105,7 @@ namespace WindowsFormsApp1
                 QLSHOPBLL.instance.AddSLSP(new SoLuongSP { MSP = txtID.Text, Size = 43, SoLuong = Convert.ToInt32(txtSize42.Text) });
                 d();
                 this.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -112,8 +123,15 @@ namespace WindowsFormsApp1
             OpenFileDialog file = new OpenFileDialog();
             if (file.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = new Bitmap(file.FileName);
-                Txtpic.Text = file.FileName;
+                try
+                {
+                    pictureBox1.Image = new Bitmap(file.FileName);
+                    Txtpic.Text = file.FileName;
+                }
+                catch
+                {
+                    MessageBox.Show("chon sai loai file");
+                }
             }
         }
 
