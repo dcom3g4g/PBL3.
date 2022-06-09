@@ -180,7 +180,7 @@ namespace WindowsFormsApp1.BLL
         public bool checkNV(string MNV)
         {
             if (db.Nhanviens.Where(p => p.MaNV == MNV).ToList().FirstOrDefault() != null)
-                return true;
+                return true;    
             return false;
         }
         public int  GetGiaThanhByMaSP(string MA)
@@ -454,5 +454,37 @@ namespace WindowsFormsApp1.BLL
             return data;
         }
 
+        public List<ChiTietHoaDonView> GetChiTietHoaDonViews(List<ChiTietHoaDon> a)
+        {
+            List<ChiTietHoaDonView> data = new List<ChiTietHoaDonView>();
+            foreach (ChiTietHoaDon i in a)
+                data.Add(new ChiTietHoaDonView
+                {
+                    MSP = i.MSP,
+                    Size = i.Size,
+                    SoLuong = i.SoLuong,
+                    GiaThanh = QLSHOPBLL.instance.GetGiaThanhByMaSP(i.MSP),
+                    TongTien =  QLSHOPBLL.instance.GetGiaThanhByMaSP(i.MSP)* i.SoLuong,
+             
+                });
+            
+            return data;
+        }
+     
+        public HoaDon GetHDbyMAHD(string MHD)
+        {
+            return db.Hoadons.Where(p => p.MaHD == MHD).ToList().FirstOrDefault();
+        }
+        
+            public List<ChiTietHoaDon> GetListChiTietHoaDon()
+        {
+            return db.ChiTietHoaDons.ToList();
+        }
+        public List<ChiTietHoaDon> searchhd(string s)
+        {
+            List<ChiTietHoaDon> data = new List<ChiTietHoaDon>();
+            data = db.ChiTietHoaDons.Where(p => p.MaHD.Contains(s)).Select(p => p).ToList();
+            return data;
+        }
     }
 }

@@ -40,13 +40,15 @@ namespace WindowsFormsApp1
         }
         public void showHD()
         {
+            //dataGridView1.DataSource = QLSHOPBLL.instance.GetChiTietHoaDonViews(QLSHOPBLL.instance.GetListChiTietHoaDon());
             dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.GetListHD());
+
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void button5_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(MA); 
-            addHD a = new addHD(MA);
+            addHD a = new addHD(MA,"",0);
             a.d = new addHD.Mydel(showHD);
             a.Show();
         }
@@ -81,5 +83,17 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource =QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.SearchHD(txtSearch.Text));
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                addHD f = new addHD(dataGridView1.SelectedRows[0].Cells["MaNV"].Value.ToString(), dataGridView1.SelectedRows[0].Cells["MaHD"].Value.ToString(), 1);
+                f.d = new addHD.Mydel(showHD);
+                f.Show();
+            }
+        }
+
+     
     }
 }

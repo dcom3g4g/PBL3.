@@ -8,7 +8,7 @@ namespace WindowsFormsApp1.DTO
 {
     public class ChiTietHoaDonView
     {
-        public string MaSP { get; set; }    
+        public string MSP { get; set; }    
         public int Size { get; set; }
         public int SoLuong { get; set; }
         public int GiaThanh { get; set;  }
