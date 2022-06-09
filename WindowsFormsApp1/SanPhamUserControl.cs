@@ -79,7 +79,9 @@ namespace WindowsFormsApp1
 
         private void btsort_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = QLSHOPBLL.instance.GetSPView(QLSHOPBLL.instance.SortSP(cbbSort.SelectedItem.ToString()));
+            if (cbbSort.SelectedItem == null)
+                MessageBox.Show("Chua chon thuoc tinh sap xep"); 
+            else dataGridView1.DataSource = QLSHOPBLL.instance.GetSPView(QLSHOPBLL.instance.SortSP(cbbSort.SelectedItem.ToString()));
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
