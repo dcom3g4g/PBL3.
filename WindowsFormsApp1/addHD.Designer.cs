@@ -57,9 +57,10 @@
             this.txtnamesp = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.txttongtien = new System.Windows.Forms.TextBox();
             this.lbtongtien = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -71,12 +72,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.updownsize)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -108,6 +111,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtidhoadon);
             this.panel2.Controls.Add(this.txtidnv);
             this.panel2.Controls.Add(this.label6);
@@ -199,7 +203,7 @@
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.giaylon;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 175);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 173);
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
@@ -388,35 +392,17 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.txttongtien);
-            this.panel4.Controls.Add(this.lbtongtien);
             this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.panel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 228);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1155, 524);
             this.panel4.TabIndex = 3;
             // 
-            // txttongtien
-            // 
-            this.txttongtien.Enabled = false;
-            this.txttongtien.Location = new System.Drawing.Point(307, 496);
-            this.txttongtien.Name = "txttongtien";
-            this.txttongtien.Size = new System.Drawing.Size(189, 22);
-            this.txttongtien.TabIndex = 54;
-            // 
-            // lbtongtien
-            // 
-            this.lbtongtien.AutoSize = true;
-            this.lbtongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbtongtien.Location = new System.Drawing.Point(175, 490);
-            this.lbtongtien.Name = "lbtongtien";
-            this.lbtongtien.Size = new System.Drawing.Size(92, 32);
-            this.lbtongtien.TabIndex = 1;
-            this.lbtongtien.Text = "Total:";
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
@@ -424,8 +410,38 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1155, 480);
+            this.dataGridView1.Size = new System.Drawing.Size(1155, 460);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.txttongtien);
+            this.panel6.Controls.Add(this.lbtongtien);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1155, 524);
+            this.panel6.TabIndex = 55;
+            // 
+            // txttongtien
+            // 
+            this.txttongtien.Enabled = false;
+            this.txttongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttongtien.Location = new System.Drawing.Point(316, 476);
+            this.txttongtien.Name = "txttongtien";
+            this.txttongtien.Size = new System.Drawing.Size(189, 30);
+            this.txttongtien.TabIndex = 54;
+            // 
+            // lbtongtien
+            // 
+            this.lbtongtien.AutoSize = true;
+            this.lbtongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtongtien.Location = new System.Drawing.Point(185, 473);
+            this.lbtongtien.Name = "lbtongtien";
+            this.lbtongtien.Size = new System.Drawing.Size(92, 32);
+            this.lbtongtien.TabIndex = 1;
+            this.lbtongtien.Text = "Total:";
             // 
             // panel5
             // 
@@ -475,8 +491,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.updownsl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updownsize)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -518,5 +535,6 @@
         private System.Windows.Forms.TextBox txtidhoadon;
         private System.Windows.Forms.Label lbtongtien;
         private System.Windows.Forms.TextBox txttongtien;
+        private System.Windows.Forms.Panel panel6;
     }
 }

@@ -15,28 +15,58 @@ namespace WindowsFormsApp1
     public partial class addHD : Form
     {
         public string MA = "";
+        public string MB = "";
         public List<ChiTietHoaDonView> list = new List<ChiTietHoaDonView>() ;
         
         public delegate void Mydel();
         public Mydel d { get; set; }
-        public addHD(string Ma)
+        
+
+        public addHD(string Ma,string Mb,int x)
         {
             InitializeComponent();
             MA = Ma;
-            GUI(); 
+            MB = Mb;    
+            GUI(x); 
+           
         }
-        public void GUI()
+        public void GUI(int a)
         {
-            
-            txtidnv.Text = MA;
-            txtnamenv.Text = QLSHOPBLL.instance.GetNVByMaNV(MA).Name;
-            txtday.Text = DateTime.Now.ToString();
-            txtidhoadon.Text = QLSHOPBLL.instance.GetMaHDLast().ToString(); 
-            foreach(SanPham i in QLSHOPBLL.instance.GetListSP() )
+            if (a == 0)
             {
-                cbidsp.Items.Add(i.MSP); 
+                txtidnv.Text = MA;
+                txtnamenv.Text = QLSHOPBLL.instance.GetNVByMaNV(MA).Name;
+                txtday.Text = DateTime.Now.ToString();
+                txtidhoadon.Text = QLSHOPBLL.instance.GetMaHDLast().ToString();
+                foreach (SanPham i in QLSHOPBLL.instance.GetListSP())
+                {
+                    cbidsp.Items.Add(i.MSP);
+                }
             }
-            
+            if (a == 1 )
+            {
+
+                txtidnv.Text = MA;
+                txtnamenv.Text = QLSHOPBLL.instance.GetNVByMaNV(MA).Name;
+                txtidhoadon.Text = MB;
+                txttongtien.Text = QLSHOPBLL.instance.GetHDbyMAHD(MB).TongTien.ToString();
+                txtday.Text = QLSHOPBLL.instance.GetHDbyMAHD(MB).NgayThang.ToString();
+                dataGridView1.DataSource = QLSHOPBLL.instance.GetChiTietHoaDonViews(QLSHOPBLL.instance.searchhd(txtidhoadon.Text));
+                label7.Visible = false;
+                label8.Visible = false;
+                label9.Visible = false;
+                label10.Visible = false;
+                cbidsp.Visible = false;
+                txtnamesp.Visible = false;
+                updownsize.Visible = false;
+                updownsl.Visible = false;
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+             
+                
+
+            }    
         }
         
 
@@ -91,7 +121,7 @@ namespace WindowsFormsApp1
             {
                 foreach (ChiTietHoaDonView i in list)
                 {
-                    if (i.MaSP == MASP && i.Size == size)
+                    if (i.MSP == MASP && i.Size == size)
                         list.Remove(i);
                 }
             }
@@ -103,7 +133,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Check(cbidsp.SelectedItem.ToString(), Convert.ToInt32(updownsize.Value)); 
-            list.Add(new ChiTietHoaDonView{ MaSP=cbidsp.SelectedItem.ToString(),Size=Convert.ToInt32(updownsize.Value), SoLuong=Convert.ToInt32(updownsl.Value),GiaThanh= QLSHOPBLL.instance.GetGiaThanhByMaSP(cbidsp.SelectedItem.ToString()) , TongTien= QLSHOPBLL.instance.GetGiaThanhByMaSP(cbidsp.SelectedItem.ToString()) * Convert.ToInt32(updownsl.Value) }) ;
+            list.Add(new ChiTietHoaDonView{ MSP=cbidsp.SelectedItem.ToString(),Size=Convert.ToInt32(updownsize.Value), SoLuong=Convert.ToInt32(updownsl.Value),GiaThanh= QLSHOPBLL.instance.GetGiaThanhByMaSP(cbidsp.SelectedItem.ToString()) , TongTien= QLSHOPBLL.instance.GetGiaThanhByMaSP(cbidsp.SelectedItem.ToString()) * Convert.ToInt32(updownsl.Value) }) ;
             //MessageBox.Show(list.Count.ToString()); 
             //MessageBox.Show(cbidsp.SelectedItem.ToString() + Convert.ToInt32(updownsl.Value).ToString());
             Show(list); 
@@ -125,9 +155,9 @@ namespace WindowsFormsApp1
             QLSHOPBLL.instance.AddHoaDon(new HoaDon { MaHD=txtidhoadon.Text, MaNV = MA, TongSL = TotalSLSP(), TongTien = Total() ,NgayThang=DateTime.Now});
             foreach (ChiTietHoaDonView i in list)
             {
-                QLSHOPBLL.instance.AddChitiethoadon(new ChiTietHoaDon { MaHD = txtidhoadon.Text, MSP = i.MaSP, Size = i.Size, SoLuong = i.SoLuong });
-                QLSHOPBLL.instance.AddSLSP(new SoLuongSP { MSP = i.MaSP, Size = i.Size, SoLuong = QLSHOPBLL.instance.GetSLSPByMSPandSize(i.MaSP,i.Size)- i.SoLuong }); ;
-                QLSHOPBLL.instance.UpdateTongSLSPbyMaSP(i.MaSP, i.SoLuong); 
+                QLSHOPBLL.instance.AddChitiethoadon(new ChiTietHoaDon { MaHD = txtidhoadon.Text, MSP = i.MSP, Size = i.Size, SoLuong = i.SoLuong });
+                QLSHOPBLL.instance.AddSLSP(new SoLuongSP { MSP = i.MSP, Size = i.Size, SoLuong = QLSHOPBLL.instance.GetSLSPByMSPandSize(i.MSP,i.Size)- i.SoLuong }); ;
+                QLSHOPBLL.instance.UpdateTongSLSPbyMaSP(i.MSP, i.SoLuong); 
             }
             QLSHOPBLL.instance.AddDoanhThu(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, new DoanhThu { NgayThang = DateTime.Now, Tongtien = Total() }); 
             d();

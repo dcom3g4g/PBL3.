@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             else if (ngay <=21) d = 3;
             else if (ngay >28) d = 5;
             else if (ngay <= 28) d = 4;
-            MessageBox.Show((1 + (7 * (d - 1))).ToString());
+            //MessageBox.Show((1 + (7 * (d - 1))).ToString());
             charttuan.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Ngay" + (1 + (7 * (d - 1))).ToString(),QLSHOPBLL.instance.GetDoanhThuTrongNgay(1+(7*(d-1)),thang,nam) );
             charttuan.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Ngay" + (2 + (7 * (d - 1))).ToString(), QLSHOPBLL.instance.GetDoanhThuTrongNgay(2 + (7 * (d - 1)), thang, nam));
             charttuan.Series["Doanh Thu (triệu đồng)"].Points.AddXY("Ngay" + (3 + (7 * (d - 1))).ToString(), QLSHOPBLL.instance.GetDoanhThuTrongNgay(3 + (7 * (d - 1)), thang, nam));
