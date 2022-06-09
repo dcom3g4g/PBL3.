@@ -202,6 +202,7 @@ namespace WindowsFormsApp1.BLL
                     Gender = v.Gender,
                     DiaChi = v.DiaChi,
                     NgaySinh = v.NgaySinh,
+                    SoGioLamViec = v.SoGioLamViec,
                 });
             }
             return nv;
@@ -573,6 +574,13 @@ namespace WindowsFormsApp1.BLL
                 });
             
             return data;
+        }
+
+        public void AddGio(string MaNV, double time)
+        {
+            var l1 = db.Nhanviens.Where(p => p.MaNV == MaNV).FirstOrDefault();
+            l1.SoGioLamViec += time;
+            db.SaveChanges();
         }
      
         public HoaDon GetHDbyMAHD(string MHD)
