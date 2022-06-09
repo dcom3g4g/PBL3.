@@ -28,20 +28,12 @@ namespace WindowsFormsApp1
             a.Show();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -60,7 +52,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("Tai khoan khong ton tai");
+                MessageBox.Show("Ten tai khoan hoac mat khau khong dung");
             }
         }
     }

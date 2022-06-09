@@ -203,6 +203,7 @@ namespace WindowsFormsApp1.BLL
                     DiaChi = v.DiaChi,
                     NgaySinh = v.NgaySinh,
                     SoGioLamViec = v.SoGioLamViec,
+                    Luong = v.LuongCB*v.SoGioLamViec,
                 });
             }
             return nv;
