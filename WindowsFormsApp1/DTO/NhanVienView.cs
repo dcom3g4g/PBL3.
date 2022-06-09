@@ -17,6 +17,6 @@ namespace WindowsFormsApp1.DTO
         public string DiaChi { get; set; }
         public string NgaySinh { get; set; }
         public double SoGioLamViec { get; set; }
-
+        public double Luong { get; set; }
     }
 }
