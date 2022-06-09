@@ -88,19 +88,36 @@ namespace WindowsFormsApp1
 
         private void ButSave_Click(object sender, EventArgs e)
         {
-            QLSHOPBLL.instance.AddUpdateNV(new NhanVien
+            if ((rdFemale.Checked==false && rdMale.Checked==false)||txtID.Text == "" || txtName.Text == "" || txtGmail.Text == "" || txtSDT.Text == "" || txtLuong.Text == "" || txtaddress.Text == "" || Txtngaysinh.Text == "")
             {
-                MaNV = txtID.Text,
-                Name = txtName.Text,
-                Gmail = txtGmail.Text,
-                SDT = Convert.ToInt32(txtSDT.Text),
-                LuongCB = Convert.ToInt32(txtLuong.Text),
-                Gender = rdMale.Checked,
-                DiaChi = txtaddress.Text,
-                NgaySinh = Txtngaysinh.Text,
-            }) ;
-            d();
-            this.Close();
+                MessageBox.Show("Co thuoc tinh chua duocj nhap");
+
+            }
+            else
+            {
+                try
+                {
+                    QLSHOPBLL.instance.AddUpdateNV(new NhanVien
+                    {
+                        MaNV = txtID.Text,
+                        Name = txtName.Text,
+                        Gmail = txtGmail.Text,
+                        SDT = Convert.ToInt32(txtSDT.Text),
+                        LuongCB = Convert.ToInt32(txtLuong.Text),
+                        Gender = rdMale.Checked,
+                        DiaChi = txtaddress.Text,
+                        NgaySinh = Txtngaysinh.Text,
+                    });
+
+
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Thong tin sua doi loi");
+                }
+                d();
+                this.Close();
+            }
         }
     }
 }
