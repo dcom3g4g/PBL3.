@@ -152,16 +152,31 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            QLSHOPBLL.instance.AddHoaDon(new HoaDon { MaHD=txtidhoadon.Text, MaNV = MA, TongSL = TotalSLSP(), TongTien = Total() ,NgayThang=DateTime.Now});
-            foreach (ChiTietHoaDonView i in list)
+            try
             {
-                QLSHOPBLL.instance.AddChitiethoadon(new ChiTietHoaDon { MaHD = txtidhoadon.Text, MSP = i.MSP, Size = i.Size, SoLuong = i.SoLuong });
-                QLSHOPBLL.instance.AddSLSP(new SoLuongSP { MSP = i.MSP, Size = i.Size, SoLuong = QLSHOPBLL.instance.GetSLSPByMSPandSize(i.MSP,i.Size)- i.SoLuong }); ;
-                QLSHOPBLL.instance.UpdateTongSLSPbyMaSP(i.MSP, i.SoLuong); 
+                if (TotalSLSP()== 0)
+                {
+                    MessageBox.Show("Danh sach san pham rong");
+                }
+                else
+                {
+                    QLSHOPBLL.instance.AddHoaDon(new HoaDon { MaHD = txtidhoadon.Text, MaNV = MA, TongSL = TotalSLSP(), TongTien = Total(), NgayThang = DateTime.Now });
+                    foreach (ChiTietHoaDonView i in list)
+                    {
+                        QLSHOPBLL.instance.AddChitiethoadon(new ChiTietHoaDon { MaHD = txtidhoadon.Text, MSP = i.MSP, Size = i.Size, SoLuong = i.SoLuong });
+                        QLSHOPBLL.instance.AddSLSP(new SoLuongSP { MSP = i.MSP, Size = i.Size, SoLuong = QLSHOPBLL.instance.GetSLSPByMSPandSize(i.MSP, i.Size) - i.SoLuong }); ;
+                        QLSHOPBLL.instance.UpdateTongSLSPbyMaSP(i.MSP, i.SoLuong);
+                    }
+                    QLSHOPBLL.instance.AddDoanhThu(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, new DoanhThu { NgayThang = DateTime.Now, Tongtien = Total() });
+                    d();
+                    this.Close();
+                };
             }
-            QLSHOPBLL.instance.AddDoanhThu(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, new DoanhThu { NgayThang = DateTime.Now, Tongtien = Total() }); 
-            d();
-            this.Close();
+            catch (Exception i)
+            {
+                MessageBox.Show("Nhap thong tin loi"); 
+            }
+            
         }
     }
 }
