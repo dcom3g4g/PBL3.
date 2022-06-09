@@ -16,5 +16,7 @@ namespace WindowsFormsApp1.DTO
         public bool Gender { get; set; }
         public string DiaChi { get; set; }
         public string NgaySinh { get; set; }
+        public double SoGioLamViec { get; set; }
+
     }
 }

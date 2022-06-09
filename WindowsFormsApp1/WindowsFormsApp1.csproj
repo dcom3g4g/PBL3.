@@ -93,6 +93,12 @@
     <Compile Include="Detailsanpham.Designer.cs">
       <DependentUpon>Detailsanpham.cs</DependentUpon>
     </Compile>
+    <Compile Include="DiemDanhUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiemDanhUserControl.Designer.cs">
+      <DependentUpon>DiemDanhUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThuNam.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Detailsanpham.resx">
       <DependentUpon>Detailsanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiemDanhUserControl.resx">
+      <DependentUpon>DiemDanhUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoanhThuNam.resx">
       <DependentUpon>DoanhThuNam.cs</DependentUpon>

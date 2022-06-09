@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
 
 namespace WindowsFormsApp1
 {
     public partial class EmployeeForm : Form
     {
+
         public static string Ma = "";
         static EmployeeForm _obj;
 
@@ -29,6 +31,8 @@ namespace WindowsFormsApp1
        // public Employee_user Employeeuser = new Employee_user();
        public SanPhamUserControl sanpham = new SanPhamUserControl(1);
         //public Hoadon hd = new Hoadon();
+
+        public DiemDanhUserControl dd;
 
         public static EmployeeForm Instance
         {
@@ -51,6 +55,7 @@ namespace WindowsFormsApp1
         { 
             Ma = MANV;
             Employee_user Employeeuser = new Employee_user(Ma);
+            DiemDanhUserControl dd = new DiemDanhUserControl(Ma);
             Hoadon hd = new Hoadon(Ma,0);
             
             InitializeComponent();
@@ -68,6 +73,9 @@ namespace WindowsFormsApp1
             Employeeuser.Dock = DockStyle.Fill;
             panel4.Controls.Add(Employeeuser);
             EmployeeForm.Instance.panel4_.Controls["Employee_user"].BringToFront();
+            DiemDanhUserControl dd = new DiemDanhUserControl(Ma);
+            dd.Dock = DockStyle.Fill;
+            panel4.Controls.Add(dd);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,21 +101,20 @@ namespace WindowsFormsApp1
            
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            
             this.Close();
             Loginform a = new Loginform();
             a.Show();
+        }
+
+
+        private void butdiemdanh_Click(object sender, EventArgs e)
+        {
+            EmployeeForm.Instance.panel4_.Controls["DiemDanhUserControl"].BringToFront();
         }
     }
 }
