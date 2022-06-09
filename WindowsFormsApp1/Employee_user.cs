@@ -28,7 +28,8 @@ namespace WindowsFormsApp1
             else textBox2.Text = "Nu";
             textBox3.Text = s.DiaChi;
             textBox5.Text = s.SDT.ToString();
-            textBox6.Text = s.Gmail; 
+            textBox6.Text = s.Gmail;
+            textBox7.Text = s.NgaySinh.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

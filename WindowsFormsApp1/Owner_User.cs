@@ -18,9 +18,11 @@ namespace WindowsFormsApp1
             textBox1.Text = "Admin";
             textBox2.Text = "Tran Van Hai";
             textBox3.Text = "Nam ";
+            textBox4.Text = "01/08/2002";
             textBox5.Text = "447 Ton Duc Thang";
             textBox6.Text = "0338186574";
             textBox7.Text = "binhphaptamquoc@gmail.com"; 
+            
         }
 
         private void Owner_User_Load(object sender, EventArgs e)

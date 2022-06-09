@@ -66,6 +66,9 @@ namespace WindowsFormsApp1
 
         private void butSort_Click(object sender, EventArgs e)
         {
+            if (cbbSort.SelectedItem == null)
+                MessageBox.Show("Chua chon thuoc tinh sap xep");
+            else 
             dataGridView1.DataSource = QLSHOPBLL.instance.GetNhanvienViews(QLSHOPBLL.instance.SortNV(cbbSort.SelectedItem.ToString()));
         }
 

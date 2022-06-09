@@ -34,7 +34,8 @@ namespace WindowsFormsApp1
             cbbSort.Items.Add("Tong so luong");
             cbbSort.Items.Add("Tong tien");
             cbbnam.Items.Add("All");
-            
+            cbbngay.Enabled = false;
+            cbbthang.Enabled = false; 
             foreach (string i in QLSHOPBLL.instance.GetNam())
                 cbbnam.Items.Add(i);
             //cbbnam.SelectedIndex = 0;
@@ -94,7 +95,9 @@ namespace WindowsFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.SortHD(cbbSort.SelectedItem.ToString()));
+            if (cbbSort.SelectedItem == null)
+                MessageBox.Show("Chua chon thuoc tinh sap xep");
+            else dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.SortHD(cbbSort.SelectedItem.ToString()));
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -119,6 +122,8 @@ namespace WindowsFormsApp1
         private void cbbnam_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbbthang.SelectedIndex = 0;
+            cbbngay.Enabled = true;
+            cbbthang.Enabled = true;
             cbbngay.SelectedIndex = 0;
             dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.GetListHoaDon(cbbngay.SelectedItem.ToString(), cbbthang.SelectedItem.ToString(), cbbnam.SelectedItem.ToString())); 
         }
