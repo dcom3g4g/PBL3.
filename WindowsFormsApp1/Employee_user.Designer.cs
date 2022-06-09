@@ -130,7 +130,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(423, 21);
+            this.label9.Location = new System.Drawing.Point(572, 21);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(290, 32);
             this.label9.TabIndex = 21;
@@ -243,7 +243,6 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Employee_user";
             this.Size = new System.Drawing.Size(1833, 937);
-            this.Load += new System.EventHandler(this.Employee_user_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

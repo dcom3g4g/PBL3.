@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.butdiemdanh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.butdiemdanh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button1);
@@ -64,20 +64,21 @@
             this.panel1.Size = new System.Drawing.Size(218, 641);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // butdiemdanh
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.bill;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 385);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(218, 70);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "  Lịch làm việc";
-            this.button2.UseVisualStyleBackColor = true;
+            this.butdiemdanh.FlatAppearance.BorderSize = 0;
+            this.butdiemdanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butdiemdanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butdiemdanh.ForeColor = System.Drawing.Color.White;
+            this.butdiemdanh.Image = global::WindowsFormsApp1.Properties.Resources.bill;
+            this.butdiemdanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.butdiemdanh.Location = new System.Drawing.Point(0, 385);
+            this.butdiemdanh.Name = "butdiemdanh";
+            this.butdiemdanh.Size = new System.Drawing.Size(218, 70);
+            this.butdiemdanh.TabIndex = 11;
+            this.butdiemdanh.Text = "        Điểm Danh";
+            this.butdiemdanh.UseVisualStyleBackColor = true;
+            this.butdiemdanh.Click += new System.EventHandler(this.butdiemdanh_Click);
             // 
             // pictureBox1
             // 
@@ -146,7 +147,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(977, 40);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button6
             // 
@@ -236,7 +236,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(977, 511);
             this.panel4.TabIndex = 3;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // EmployeeForm
             // 
@@ -279,6 +278,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button butdiemdanh;
     }
 }

@@ -38,9 +38,6 @@ namespace WindowsFormsApp1
             f.Show();  
         }
 
-        private void Employee_user_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
