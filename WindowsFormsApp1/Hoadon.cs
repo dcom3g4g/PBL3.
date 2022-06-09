@@ -33,6 +33,26 @@ namespace WindowsFormsApp1
             cbbSort.Items.Add("Ma hoa don");
             cbbSort.Items.Add("Tong so luong");
             cbbSort.Items.Add("Tong tien");
+            cbbnam.Items.Add("All");
+            
+            foreach (string i in QLSHOPBLL.instance.GetNam())
+                cbbnam.Items.Add(i);
+            //cbbnam.SelectedIndex = 0;
+            cbbthang.Items.Add("All");
+            
+            for (int i=1;i<13;i++)
+            {
+                cbbthang.Items.Add(i.ToString()); 
+            }
+            //cbbthang.SelectedIndex = 0;
+            cbbngay.Items.Add("All");
+            
+            for (int i = 1; i < 32; i++)
+            {
+                cbbngay.Items.Add(i.ToString());
+            }
+             //  cbbngay.SelectedIndex = 0;
+
         }
         public void GUI()
         {
@@ -80,6 +100,25 @@ namespace WindowsFormsApp1
         {
             dataGridView1.DataSource =QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.SearchHD(txtSearch.Text));
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void cbbnam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbbthang.SelectedIndex = 0;
+            cbbngay.SelectedIndex = 0;
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.GetListHoaDon(cbbngay.SelectedItem.ToString(), cbbthang.SelectedItem.ToString(), cbbnam.SelectedItem.ToString())); 
+        }
+
+        private void cbbthang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbbngay.SelectedIndex = 0;
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.GetListHoaDon(cbbngay.SelectedItem.ToString(), cbbthang.SelectedItem.ToString(), cbbnam.SelectedItem.ToString()));
+        }
+
+        private void cbbngay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //cbbngay.SelectedIndex = 0;
+            dataGridView1.DataSource = QLSHOPBLL.instance.GetHoaDonView(QLSHOPBLL.instance.GetListHoaDon(cbbngay.SelectedItem.ToString(), cbbthang.SelectedItem.ToString(), cbbnam.SelectedItem.ToString()));
         }
     }
 }

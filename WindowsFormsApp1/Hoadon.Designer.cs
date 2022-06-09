@@ -139,6 +139,7 @@
             this.cbbngay.Name = "cbbngay";
             this.cbbngay.Size = new System.Drawing.Size(85, 37);
             this.cbbngay.TabIndex = 38;
+            this.cbbngay.SelectedIndexChanged += new System.EventHandler(this.cbbngay_SelectedIndexChanged);
             // 
             // cbbthang
             // 
@@ -148,6 +149,7 @@
             this.cbbthang.Name = "cbbthang";
             this.cbbthang.Size = new System.Drawing.Size(85, 37);
             this.cbbthang.TabIndex = 39;
+            this.cbbthang.SelectedIndexChanged += new System.EventHandler(this.cbbthang_SelectedIndexChanged);
             // 
             // cbbnam
             // 
@@ -157,6 +159,7 @@
             this.cbbnam.Name = "cbbnam";
             this.cbbnam.Size = new System.Drawing.Size(85, 37);
             this.cbbnam.TabIndex = 40;
+            this.cbbnam.SelectedIndexChanged += new System.EventHandler(this.cbbnam_SelectedIndexChanged);
             // 
             // label2
             // 

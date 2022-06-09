@@ -314,6 +314,110 @@ namespace WindowsFormsApp1.BLL
 
             return x;
         }
+        public bool checkday(List<string> x, int y)
+        {
+            for (int i=0;i<x.Count;i++)
+            {
+                if (x[i] == y.ToString()) return false; 
+            }
+            return true; 
+        }
+        public List<string> GetNgay(string thang, string nam)
+        {
+            List<string> x = new List<string>();
+            if (thang == "All" && nam == "All")
+            {
+                for (int i = 0; i < 32; i++)
+                {
+                    x.Add(i.ToString());
+                }
+            }
+            else if (thang != "All" && nam == "All")
+            {
+                foreach (HoaDon i in db.Hoadons.Where(p => p.NgayThang.Month.ToString() == thang).ToList())
+                {
+                    if (checkday(x, i.NgayThang.Day))
+                        x.Add(i.NgayThang.Day.ToString());
+                }
+            }
+            else if (nam != "All" && thang == "")
+            {
+                foreach (HoaDon i in db.Hoadons.Where(p => p.NgayThang.Year.ToString() == nam).ToList())
+                {
+                    if (checkday(x, i.NgayThang.Day))
+                        x.Add(i.NgayThang.Day.ToString());
+                }
+            }
+            else if (nam != "All" && thang != "All")
+            {
+                foreach (HoaDon i in db.Hoadons.Where(p => p.NgayThang.Month.ToString() == thang && p.NgayThang.Year.ToString() == nam).ToList())
+                {
+                    if (checkday(x, i.NgayThang.Day))
+                        x.Add(i.NgayThang.Day.ToString());
+                }
+            }
+            return x; 
+        }
+        public bool Checkthang(List<string> x, int thang)
+        {
+            for (int i = 0; i < x.Count; i++)
+            {
+                if (x[i] == thang.ToString()) return false;
+            }
+            return true;
+        }
+        public List<HoaDon> GetListHoaDon(string ngay, string thang, string nam)
+        {
+            int n = 0, t = 0, na = 0; 
+            if (ngay== "All") n = 1; 
+            if (thang == "All") t = 1;
+            if (nam == "All") na = 1;
+            if (na == 1 && n == 1 && t == 1)
+                return db.Hoadons.Select(p => p).ToList();
+            else if (na == 1 && t == 1)
+                return db.Hoadons.Where(p => p.NgayThang.Day.ToString() == (ngay) ).ToList();
+            else if (na == 1 && n == 1)
+                return db.Hoadons.Where(p => p.NgayThang.Month.ToString() ==(thang) ).ToList();
+            else if (t == 1 && n == 1)
+                return db.Hoadons.Where(p => p.NgayThang.Year.ToString() == (nam)).ToList();
+            else if (t == 1)
+                return db.Hoadons.Where(p => p.NgayThang.Year.ToString() == (nam) && p.NgayThang.Day.ToString() == (ngay)).ToList();
+            else if (na == 1)
+                return db.Hoadons.Where(p => p.NgayThang.Month.ToString() == (thang) && p.NgayThang.Day.ToString() == (ngay)).ToList();
+            else if (n == 1)
+                return db.Hoadons.Where(p => p.NgayThang.Year.ToString() == (nam) && p.NgayThang.Month.ToString() == (thang)).ToList();
+            else if (n == 0 && na==0 && t==0)
+                return db.Hoadons.Where(p => p.NgayThang.Month.ToString() == (thang) && p.NgayThang.Year.ToString() == (nam) && p.NgayThang.Day.ToString() == (ngay)).ToList();
+            return null; 
+        }
+        public List<string> GetThang(string nam)
+        {
+            List<string> x = new List<string>();
+            if (nam != "All")
+            {
+                foreach (HoaDon i in db.Hoadons.Where(p => p.NgayThang.Year == Convert.ToInt32(nam)).ToList())
+                {
+                    if (Checkthang(x, i.NgayThang.Month))
+                        x.Add(i.NgayThang.Month.ToString());
+                }
+            }
+            else
+            {
+                for (int i = 0; i < 13; i++)
+                    x.Add(i.ToString()); 
+            }
+            return x; 
+        }
+        public List<string> GetNam()
+        {
+            List<string> x = new List<string>();
+            foreach (HoaDon i in db.Hoadons.Select(p => p).ToList())
+            {
+                if (Checkthang(x, i.NgayThang.Year))
+                    x.Add(i.NgayThang.Year.ToString());
+            }
+            return x;
+        }
 
         public int GetMaHDLast()
         {
